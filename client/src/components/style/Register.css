@@ -1,0 +1,95 @@
+
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8; 
+}
+
+
+.registration-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+
+.form-title {
+    grid-column: span 2;
+    text-align: center;
+    color: #333333; 
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333; 
+    font-size: 14px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc; 
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+.submit-button {
+    grid-column: span 2;
+    width: 100%;
+    padding: 10px;
+    background-color: #336699;
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #254e77; 
+}
+
+
+.form-link {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.form-link .register-a {
+    color: #336699; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.form-link .register-a:hover {
+    color: #254e77; 
+}
+
+
+.error-message {
+    color: #ff3333; 
+    margin-top: 5px;
+    font-size: 12px;
+}

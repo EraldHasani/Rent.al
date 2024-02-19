@@ -1,0 +1,58 @@
+{
+  "hash": "f1779fda",
+  "configHash": "04de701a",
+  "lockfileHash": "f36785f7",
+  "browserHash": "231267fc",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "596bd5f7",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "a15a547f",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "a8fccdd2",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "a0561fc3",
+      "needsInterop": false
+    },
+    "@mui/lab": {
+      "src": "../../node_modules/@mui/lab/index.js",
+      "file": "@mui_lab.js",
+      "fileHash": "0dd11420",
+      "needsInterop": false
+    },
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material.js",
+      "fileHash": "44a7a82a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-GD4EV5AG": {
+      "file": "chunk-GD4EV5AG.js"
+    },
+    "chunk-PXJLUKTU": {
+      "file": "chunk-PXJLUKTU.js"
+    },
+    "chunk-FQO5W7GE": {
+      "file": "chunk-FQO5W7GE.js"
+    },
+    "chunk-ZS7NZCD4": {
+      "file": "chunk-ZS7NZCD4.js"
+    }
+  }
+}

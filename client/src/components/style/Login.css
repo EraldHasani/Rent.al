@@ -1,0 +1,122 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: #f2f2f2; 
+  }
+  
+  .login-container {
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px; /* Responsive width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+  }
+  
+  /* Title */
+  .login-h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #222; 
+  }
+  
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  
+  .logn-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #eee; 
+  }
+  
+  
+  .login-button {
+    background-color: #333; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .login-button:hover {
+    background-color: #222; 
+  }
+  
+ 
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+  }
+  
+  .login-a {
+    color: #333; 
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .login-a:hover {
+    color: #222; 
+  }
+  
+  
+  .input-field {
+    /* Optional tire tread pattern border */
+    border-image: url("/to/your/tire-tread.png") 1 stretch;
+  }
+  
+  .login-button {
+    /* Optional steering wheel icon background */
+    background-image: url("path/to/your/steering-wheel.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    font-family: Font Awesome; 
+    
+    content: "\f083"; /* Steering wheel icon code */
+  }
+  
+  
+  .login-h1 {
+    color: #222; 
+    text-shadow: 0 0 2px #008000; 
+  }
+  
+  .login-button:hover {
+    background-color: #008000; 
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .login-container {
+      width: 90%;
+    }
+  }
+  
+  .register{
+    color: blue;
+  }
+ 
