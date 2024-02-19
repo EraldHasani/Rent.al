@@ -583,16 +583,16 @@ const UpdateProduct = (props) => {
       <div className="containe">
             <div className="col-md-6 " style={{marginLeft:"300px"}} >
               <div className="form-group">
-                <label htmlFor="targa">Targa</label>
+                <label htmlFor="targa">Number Plate</label>
                 <input type="text" className="form-control"id="targa" value={targa} onChange={(e) => setTarga(e.target.value)} />
               </div>
               <div className="form-group ">
-                <label htmlFor="shasia " className="mr-2">Shasia</label>
+                <label htmlFor="shasia " className="mr-2">Chassis Nr.</label>
                 <input type="text" className="form-control" id="shasia" value={shasia} onChange={(e) => setShasia(e.target.value)} />
                
               </div>
               <div className="form-group">
-                <label htmlFor="vitiProdhimit">Viti i prodhimit</label>
+                <label htmlFor="vitiProdhimit">Year Model</label>
                 <select type="text" className="form-control" id="vitiProdhimit" value={vitiProdhimit} onChange={(e) => setVitiProdhimit(e.target.value)} >
                   <option value="" disabled>Select a year</option>
                   <option value="2024">2024</option>
@@ -615,11 +615,11 @@ const UpdateProduct = (props) => {
                   </select>
               </div>
               <div className="form-group">
-                <label htmlFor="brandi">Brandi</label>
+                <label htmlFor="brandi">Brand</label>
                 <select
                   id="selectedBrand" value={selectedBrand} onChange={(e)=>setSelectedBrand(e.target.value)} className="form-control" >
                  
-                  <option value="">Select a brand</option>
+                  <option value="">Brand Model</option>
                   <option value="BMW">BMW</option>
                   <option value="Mercedes-Benz">Mercedes-Benz</option>
                   <option value="Audi">Audi</option>
@@ -681,12 +681,12 @@ const UpdateProduct = (props) => {
       
                 <div>
                   {
-                    selectedBrand==="" ? null : <label htmlFor="Model" >Modeli</label>
+                    selectedBrand==="" ? null : <label htmlFor="Model" >Brand Model</label>
                   }
                   {selectedBrand === "Audi" && (
                     <select  id="selectedModel"  value={selectedModel}  onChange={(e) => setSelectedModel(e.target.value)} className="form-control "  >
 
-                      <option value="">Select an Audi model</option>
+                      <option value="">Select an Audi Model</option>
                       <option value="A3">A3</option>
                       <option value="A4">A4</option>
                       <option value="A5">A5</option>
@@ -716,7 +716,7 @@ const UpdateProduct = (props) => {
                   {selectedBrand === "BMW" && (
                      <select   id="selectedModel" value={selectedModel}   onChange={(e) => setSelectedModel(e.target.value)} className="form-control " >
 
-                      <option value="">Select Model</option>
+                      <option value="">Brand Model</option>
                       <option value="X5">X5</option>
                       <option value="X3">X3</option>
                       <option value="3 series">Serie 3</option>
@@ -729,7 +729,7 @@ const UpdateProduct = (props) => {
                   {selectedBrand === "Mercedes-Benz" && (
                   <select  id="selectedModel" value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)} className="form-control " >
 
-                      <option value="">Select a model</option>
+                      <option value="">Brand Model</option>
                       <option value="C-Class">C-Class</option>
                       <option value="E-Class">E-Class</option>
                       <option value="S-Class">S-Class</option>
@@ -751,7 +751,7 @@ const UpdateProduct = (props) => {
                   {selectedBrand === "Tesla" && (
                      <select   id="selectedModel" value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}   className="form-control"  >
 
-                      <option value="">Select Model</option>
+                      <option value="">Brand Model</option>
                       <option value="Model S">Model S</option>
                       <option value="Model 3">Model 3</option>
                       <option value="Model X">Model X</option>
@@ -761,9 +761,9 @@ const UpdateProduct = (props) => {
                 </div>
 
                 <div>
-                  <label htmlFor="qyteti">Qyteti</label>
+                  <label htmlFor="qyteti">City</label>
                   <select className="form-control " name="" id="" value={qyteti} onChange={(e)=>setQyteti(e.target.value)}>
-                  <option  value="" disabled >Select one City</option>       
+                  <option  value="" disabled >Select City</option>       
                  <option value="Tiranë">Tiranë</option>
                 <option value="Durrës">Durrës</option>
                 <option value="Vlorë">Vlorë</option>
@@ -821,9 +821,9 @@ const UpdateProduct = (props) => {
                   </select>
 
                 </div>
-                <h1 className="m-4">Engine and drivetrain</h1>
+                <h1 className="m-4">Engine Specs and Drivetrain</h1>
                 <div>
-                  <label htmlFor="fuel">Fuel</label>
+                  <label htmlFor="fuel">Fuel Type</label>
                   <select className="form-control " name="" id="" value={selectedFuel} onChange={(e)=>setSelectedFuel(e.target.value)}>
                     <option value="" disabled > Select Fuel</option>
                   <option value="Gasoline">Gasoline</option>
@@ -839,17 +839,17 @@ const UpdateProduct = (props) => {
                 </div>
                 <div>
                   <label htmlFor="cylinderVolumeInLiters">
-                    Cylinder volume in liters (optional)
+                  Engine displacement (optional)
                   </label>
                   <input type="number" className="form-control" id="cylinderVolumeInLiters" value={cylinderVolumeInLiters} onChange={(e) => setCylinderVolumeInLiters(e.target.value)} />
                 </div>
                 <div>
-                  <label htmlFor="powerInHp">Power in hp  (optional)</label>
+                  <label htmlFor="powerInHp">Power in HP (optional)</label>
                   <input type="number" className="form-control" id="powerInHp" value={powerInHp} onChange={(e) => setPowerInHp(e.target.value)} />
                   
                 </div>
                 <div>
-                  <label htmlFor="co2EmissionsIgKm">CO2 Emissions ig/Km  (optional)</label>
+                  <label htmlFor="co2EmissionsIgKm">Emission Standard  (optional)</label>
                   <input type="number" className="form-control" id="co2EmissionsIgKm" value={co2EmissionsIgKm } onChange={(e) => setCo2EmissionsIgKm(e.target.value)} />
                    
                 </div>
@@ -864,7 +864,7 @@ const UpdateProduct = (props) => {
                 </div>
               
                 <div>
-                  <label htmlFor="wheelDrive">Wheel drive</label>
+                  <label htmlFor="wheelDrive">Wheel Drive System</label>
                   <select className="form-control" name="" id="" value={wheelDrive} onChange={(e)=>setWheelDrive(e.target.value)}>
                     <option value="" disabled>Wheel drive</option>
                     <option value="front wheel drive">Front-wheel drive</option>
@@ -875,9 +875,9 @@ const UpdateProduct = (props) => {
                         <h1 className="m-4">Car body</h1>
 
                         <div>
-                  <label htmlFor="bodyType">Body type</label>
+                  <label htmlFor="bodyType">Body Type</label>
                   <select className="form-control" name="" id="" value={bodyType} onChange={(e)=>setBodyType(e.target.value)}>
-                    <option value="" disabled>Body type</option>
+                    <option value="" disabled>Body Type</option>
                     <option value="Sedan">Sedan</option>
                     <option value="Coupe">Coupe</option>
                     <option value="Convertible">Convertible</option>
@@ -892,7 +892,7 @@ const UpdateProduct = (props) => {
                   </select>
                         </div>
                 <div>
-                  <label htmlFor="numberOfSeats">Number of seats</label>
+                  <label htmlFor="numberOfSeats">Number of Seats</label>
                   <input
                     type="number"
                     className="form-control"
@@ -902,7 +902,7 @@ const UpdateProduct = (props) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="numberOfDoors">Number of doors</label>
+                  <label htmlFor="numberOfDoors">Number of Doors</label>
                   <input
                     type="number"
                     className="form-control"
@@ -912,7 +912,7 @@ const UpdateProduct = (props) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="netWeightInKg">Net weight in kg</label>
+                  <label htmlFor="netWeightInKg">Net weight in KG</label>
                   <input
                     type="number"
                     className="form-control"
@@ -942,7 +942,7 @@ const UpdateProduct = (props) => {
                 </div>
                
                 <div>
-                  <label htmlFor="interiorColor">Interior color</label>
+                  <label htmlFor="interiorColor">Interior Color</label>
                   <input
                     type="text"
                     className="form-control"
@@ -1021,7 +1021,7 @@ const UpdateProduct = (props) => {
                       </div>
                       <div>
                       <input className="m-2" id="cargoHolders" type="checkbox" name="cargoHolders" checked={exterior["cargoHolders"]} onChange={handleCheckboxChange} />
-                      <label htmlFor="cargoHolders">Cargo holders/sli racks</label>
+                      <label htmlFor="cargoHolders">Cargo holders</label>
 
                         </div>
                       </div>
@@ -1138,7 +1138,7 @@ const UpdateProduct = (props) => {
                       </div>
                         <div>
                       <input className="m-2" id="darkWindowsBehind" type="checkbox" name="darkWindowsBehind" checked={interior["darkWindowsBehind"]} onChange={handleCheckboxChange2} />
-                      <label htmlFor="darkWindowsBehind">Dark windows behind</label>
+                      <label htmlFor="darkWindowsBehind">Tinted Windows</label>
                       </div>
                       </div>
                       </div>
@@ -1160,7 +1160,7 @@ const UpdateProduct = (props) => {
                       </div>
                       <div>
                       <input className="m-2" id="cruiseControlAdaptive" type="checkbox" name="cruiseControlAdaptive" checked={comfort["cruiseControlAdaptive"]} onChange={handleCheckboxChange3} />
-                      <label htmlFor="cruiseControlAdaptive">Cruise Control Adaptive</label>
+                      <label htmlFor="cruiseControlAdaptive">Cruise Control </label>
                       </div>
                       <div>
                       <input className="m-2" id="middleArms" type="checkbox" name="middleArms" checked={comfort["middleArms"]} onChange={handleCheckboxChange3} />
@@ -1311,7 +1311,7 @@ const UpdateProduct = (props) => {
                       <div className="col-sm" style={{textAlign:"left", margin:"4px"}}>
                       <div>
                       <input className="m-2" id="antiSpin" type="checkbox" name="antiSpin" checked={engineDrive["antiSpin"]} onChange={handleCheckboxChange5} />
-                      <label htmlFor="antiSpin">Adaptive air suspension</label>
+                      <label htmlFor="antiSpin">Air suspension</label>
                       </div>
                       <div>
                       <input className="m-2" id="tripComputer" type="checkbox" name="tripComputer"checked={engineDrive["tripComputer"]} onChange={handleCheckboxChange5} />
@@ -1460,9 +1460,9 @@ const UpdateProduct = (props) => {
               </button> */}
             </div>
             <div>
-              <h1 className="m-4">Pictures and description</h1>
+              <h1 className="m-4">Pictures and Description</h1>
               <div>
-                <label htmlFor="image">Image</label>
+                <label htmlFor="image">ImageS</label>
                 <input type="text" multiple name="image" className="form-control" onChange={(e) => setImage(e.target.value)} placeholder="Please add one display image " />
               </div>
             </div>

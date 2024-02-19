@@ -112,14 +112,14 @@ const handleEZene = () => {
 
 
   <div style={{ width: '70%' }}>
-    <h2>Shpallje</h2>
+    <h2>Announcement</h2>
     {
     posts&& (
       <div  style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px', marginTop:"100px" }}>
       <h4>{posts.destinacioni}</h4>
-        <p>Pershkrimi: {posts.pershkrimi}</p>
-        <p>Cmimi Ditor: {posts.cmimiDitor}</p>
-        <p>Data Rezervimit : {posts.dataRezervimit}</p>
+        <p>Description: {posts.pershkrimi}</p>
+        <p>Daily Price: {posts.cmimiDitor}</p>
+        <p>Reservation Day : {posts.dataRezervimit}</p>
       </div>
       )
 
@@ -127,22 +127,22 @@ const handleEZene = () => {
      
      {
     logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) ? (
-        <button onClick={MerrPjese}>Merr Pjese</button>
+        <button onClick={MerrPjese}>Participate</button>
     ) : null
 }
 {
     logedUser && posts  &&  logedUser._id=== posts.userId && posts.eMbyllur ? (
-        <button onClick={handleELire}>Beje te  lire</button>
+        <button onClick={handleELire}>Make Available</button>
     ) : null
 }
 
       {
    logedUser && posts  && logedUser._id=== posts.userId && !posts.eMbyllur ? (
-        <button onClick={handleEZene}>Beje te Zene</button>
+        <button onClick={handleEZene}>Make Occupied</button>
     ) : null
 }
 
-      <h3>Pjesemarresit</h3>
+      <h3>Participants</h3>
       {
         posts && posts.users.map((user, index) => {
           return (

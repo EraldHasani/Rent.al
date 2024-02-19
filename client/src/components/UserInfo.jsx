@@ -35,7 +35,7 @@ function UserInfo() {
         )}
 
         <div className="mt-4 border rounded-2 card-width bg-white p10">
-          <h3>Informata personale</h3>
+          <h3>Personal Information</h3>
         </div>
         <div className="d-flex  mt-4 border rounded-2 card-width bg-white p10">
           <div>
@@ -67,7 +67,7 @@ function UserInfo() {
                 <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
               </svg>
             </p>
-            <h3>Numri i celularit:</h3>{" "}
+            <h3>Phone Number:</h3>{" "}
             <p>
               placeholder{user ? user.phoneNumber : ""}{" "}
               <svg
@@ -85,11 +85,11 @@ function UserInfo() {
         </div>
 
         <div className="mt-4 border rounded-2 card-width bg-white p10">
-          <h3>Rreth jush</h3>
+          <h3>Info</h3>
         </div>
         <div className="d-flex mt-4 border rounded-2 card-width bg-white p10">
           <div>
-            <h3>Emri:</h3>{" "}
+            <h3>Name:</h3>{" "}
             <p>
               placeholder{user ? user.firstName : ""}
               {user ? user.lastName : ""}{" "}
@@ -104,7 +104,7 @@ function UserInfo() {
                 <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
               </svg>
             </p>
-            <h3>Lindur:</h3>{" "}
+            <h3>Born:</h3>{" "}
             <p>
               placeholder{user ? user.birthday : ""}{" "}
               <svg
@@ -118,7 +118,7 @@ function UserInfo() {
                 <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
               </svg>
             </p>
-            <h3>Gjinia:</h3>{" "}
+            <h3>Gender:</h3>{" "}
             <p>
               placeholder{user ? user.gender : ""}{" "}
               <svg
@@ -140,7 +140,7 @@ function UserInfo() {
         </div>
         <div className="d-flex mt-4 border rounded-2 card-width bg-white p10">
           <div>
-            <h3>Adresa e rrugës:</h3>{" "}
+            <h3>Street Address:</h3>{" "}
             <p>
               placeholder{user ? user.adress : ""}{" "}
               <svg
@@ -154,7 +154,7 @@ function UserInfo() {
                 <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
               </svg>
             </p>
-            <h3>Kodi Postar:</h3>{" "}
+            <h3>Postal Code:</h3>{" "}
             <p>
               placeholder{user ? user.postalCode : ""}{" "}
               <svg
@@ -168,7 +168,7 @@ function UserInfo() {
                 <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
               </svg>
             </p>
-            <h3>Qyteti:</h3>{" "}
+            <h3>City:</h3>{" "}
             <p>
               placeholder{user ? user.city : ""}{" "}
               <svg
