@@ -78,17 +78,17 @@ const [updated, setUpdated] = useState(false);
               {item.targa || "Placeholder Name"}
             </Link></p> 
             <p  className="text-center">
-              Cmimi {item.cmimiTotal || null}
+              Total Price {item.cmimiTotal || null}
             </p>
            
             <p className="text-center">
-              Data e Rezervimit {item.dataRezervimit || null}
+              Reservation Day {item.dataRezervimit || null}
             </p>
             <p className="text-center">
-              Ditet {item.ditet || null}
+              Days {item.ditet || null}
             </p>
             <p className="text-center">
-              Cmimi Ditor {item.cmimiDitor || null}
+              Per Day Price {item.cmimiDitor || null}
             </p>
            
            
@@ -99,7 +99,7 @@ const [updated, setUpdated] = useState(false);
                   data-bs-target={`#loginModal-${index}`} 
                   className="btn bg-color custom-btn bordered mt-3"
                 >
-                  Krijo Postin per Rezervimin
+                  Create Reservation Post
                 </button>
 
 
@@ -116,7 +116,7 @@ const [updated, setUpdated] = useState(false);
           <div className="modal-content">
             <div className="modal-header">
               <h2 className="modal-title" id="membershipFormLabel">
-               Krijo Postin 
+               Create Post 
               </h2>
               
 
@@ -139,7 +139,7 @@ const [updated, setUpdated] = useState(false);
                 <input
                   type="text"
                   className="form-control mb-3"
-                    placeholder="Destinacioni"
+                    placeholder="Destination"
                   value={destinacioni}
                   onChange={(e) => setDestinacioni(e.target.value)}
                 />
@@ -159,7 +159,7 @@ const [updated, setUpdated] = useState(false);
                   name="submit"
                   data-bs-dismiss="modal"
                 >
-                  Krijo
+                  Create
                 </button>
               </form>
             </div>

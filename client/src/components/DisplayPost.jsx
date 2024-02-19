@@ -70,7 +70,7 @@ return (
                 <p>{post.pershkrimi}</p>
             </div>
         )}
-       <button onClick={MerrPjes}>   Merr Pjes </button>
+       <button onClick={MerrPjes}>   Participate </button>
     </div>
 );
 }
