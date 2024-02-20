@@ -5,6 +5,7 @@ import { Link,useParams } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "./style/ShpalljeOne.css"
 
 
 const ShpalljeOne = () => {
@@ -111,6 +112,7 @@ const handleEZene = () => {
   
 
 
+
     <div style={{ width: '70%', margin: 'auto' }}>
     <h2>Announcement</h2>
     {
@@ -121,11 +123,14 @@ const handleEZene = () => {
         <p className="mb-4">Description: {posts.pershkrimi}</p>
         <p className="mb-3"><strong>Daily Price:</strong> <span className="text-primary">{posts.cmimiDitor}€</span></p>
         <p className="mb-2"><strong> Day:</strong> <span className="text-success">{posts.dataRezervimit ? new Date(posts.dataRezervimit).toLocaleDateString() : null}</span></p>
+
+  
       </div>
     </div>
       )
 
     }
+
      
      {logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) && (
     <button className="btn btn-primary m-3" onClick={MerrPjese}>Participate</button>
@@ -164,7 +169,7 @@ const handleEZene = () => {
   
 
 
- 
+
 
     
     </>

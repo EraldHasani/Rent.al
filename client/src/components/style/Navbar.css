@@ -1,0 +1,54 @@
+/* .navbar {
+    background: linear-gradient(to right, #3498db, #2980b9);
+  } */
+
+  .navbar a, .navbar-toggler-icon {
+    color: white;
+  }
+
+  .navbar-brand {
+    font-size: 40px; /* Adjust as needed */
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.2);
+  }
+
+  .navbar-nav li a {
+    padding: 10px 15px; /* Adjust as needed */
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navbar-nav li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.2);
+  }
+  
+  .navbar-nav li.active a {
+    font-weight: bold;
+  }
+
+  .navbar-toggler {
+    border-color: white; /* Or another matching color */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .navbar-toggler:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar-toggler-icon {
+    animation: spin 1.5s linear infinite;
+  }
+  
+   @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+   
