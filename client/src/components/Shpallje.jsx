@@ -91,7 +91,7 @@ const Shpallje = () => {
       <div className="bottom-section">
         <span className="title">
           <Link to={`/shpallje/${post._id}`}>
-            <span className="title fs-4">{post.destinacioni}</span>
+            <span className="title fs-3">{post.destinacioni}</span>
           </Link>
         </span>
         <div className="row row1">

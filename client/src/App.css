@@ -879,6 +879,22 @@ a:focus {
 
 }
 
+.cardDescription {
+  border: none;
+  background: rgba(255, 254, 254, 0.883);
+  transition: .5s;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+
+
+}
+.cardDescription:hover {
+  background: var(--light);
+  transition: .5s;
+}
 
 
 

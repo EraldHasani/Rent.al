@@ -287,7 +287,7 @@ const handleEZene = () => {
 
           
           <div className=" p-5 m-3" >
-            <h1 className="border-bottom m-2">Specifications</h1>
+            <h2 className="border-bottom m-1">Specifications</h2>
             <div className="d-flex justify-content-between">
               <div className="d-flex flex-column me-4">
              
@@ -389,11 +389,9 @@ const handleEZene = () => {
             </div>
           </div>
 
-          <div className="card border-none">
-           <div className="card-body ">
-           <h5 className="card-title mb-4">Description</h5>
+          <div className="cardDescription p-5 m-4">
+           <h2 className="card-title mb-4"><strong>Description</strong></h2>
            <p className="card-text">{form ? form.description : null} </p>                                           
-           </div>  
            </div>
 
         
@@ -401,12 +399,12 @@ const handleEZene = () => {
 
 
           <div className=" p-5 m-4">
-  <h1>Options</h1>
+  <h2 className="mb-3">Options</h2>
   {form && Object.keys(form).length > 0 && (
     <div className="row row-cols-1 g-2">
 
 
-    <h3 className="border-bottom">Exterior</h3>
+    <h3 className="border-bottom mt-3">Exterior</h3>
       {form.exterior &&
         Object.keys(form.exterior).map((item) => (
           <div key={item} className="col-md-4">

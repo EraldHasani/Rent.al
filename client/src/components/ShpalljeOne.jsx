@@ -115,26 +115,28 @@ const handleEZene = () => {
     <h2>Announcement</h2>
     {
     posts&& (
-      <div  style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px', marginTop:"100px" }}>
-      <h4>{posts.destinacioni}</h4>
-        <p>Description: {posts.pershkrimi}</p>
-        <p>Daily Price: {posts.cmimiDitor}</p>
-        <p className="regular-text fs-6">Reservation Day : {posts.dataRezervimit ? new Date(posts.dataRezervimit).toLocaleDateString() : null}</p>
+      <div style={{ display: 'grid',  marginTop: '100px' }}>
+      <div className="cardResevation" style={{ padding: '20px', backgroundColor: '#f9f9f9', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+        <h4>{posts.destinacioni}</h4>
+        <p className="mb-4">Description: {posts.pershkrimi}</p>
+        <p className="mb-3"><strong>Daily Price:</strong> <span className="text-primary">{posts.cmimiDitor}€</span></p>
+        <p className="mb-2"><strong> Day:</strong> <span className="text-success">{posts.dataRezervimit ? new Date(posts.dataRezervimit).toLocaleDateString() : null}</span></p>
       </div>
+    </div>
       )
 
     }
      
      {logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) && (
-    <button className="btn btn-primary mt-3" onClick={MerrPjese}>Participate</button>
+    <button className="btn btn-primary m-3" onClick={MerrPjese}>Participate</button>
   )}
 
   {logedUser && posts && logedUser._id === posts.userId && posts.eMbyllur && (
-    <button className="btn btn-success mt-3" onClick={handleELire}>Make Available</button>
+    <button className="btn btn-success m-3" onClick={handleELire}>Make Available</button>
   )}
 
   {logedUser && posts && logedUser._id === posts.userId && !posts.eMbyllur && (
-    <button className="btn btn-warning mt-3" onClick={handleEZene}>Make Occupied</button>
+    <button className="btn btn-warning m-3" onClick={handleEZene}>Make Occupied</button>
   )}
 
 <h3 className="mt-5">Participants</h3>
