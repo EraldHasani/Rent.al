@@ -59,15 +59,15 @@ required: true,
 },
 adress: {
   type: String,
-  required: [true, "Adress is required"]
+  // required: [true, "Adress is required"]
 },
 postalCode: {
   type: Number,
-  required: [true, "Postal code is required"]
+  // required: [true, "Postal code is required"]
 },
 city: {
   type: String,
-  required: [true, "City is required"]
+  // required: [true, "City is required"]
 },
 
     password: {

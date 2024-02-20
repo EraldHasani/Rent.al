@@ -55,7 +55,7 @@ const Login = () => {
 
     try {
         // Call the register function from the AuthContext
-        await registerClient(firstName, lastName, emailRegister,roleClient,phoneNumber,birthday,gender,adress,postalCode,city, passwordRegister,confirmPassword, );
+        await registerClient(firstName, lastName, emailRegister,roleClient,phoneNumber,birthday,gender, passwordRegister,confirmPassword, );
         navigate('/dashboard')
         // Redirect or perform any other actions after successful registration
     } catch (error) {
@@ -214,43 +214,37 @@ const Login = () => {
             <form  className="membership-form webform" onSubmit={handleRegisterClient}>
     
                     <div className="form-group form">
-                        <label className="form-label">First Name:</label>
-                        <input type="text" className="form-input" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                      <div className="d-flex justify-content-between">
+                        <input type="text" placeholder="First Name" className="form-input" value={firstName} onChange={(e) => setFirstName(e.target.value)} style={{marginRight:"20px"}} />
                         {errorFirstName ? <p className="error-message">{errorFirstName}</p> : null}
-                    </div>
-    
-                    <div className="form-group form">
-                        <label className="form-label">Last Name:</label>
-                        <input type="text" className="form-input" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                        <input type="text" placeholder="Last Name" className="form-input" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                         {errorLastName ? <p className="error-message">{errorLastName}</p> : null}
-                    </div>
+                  
     
-                    <div className="form-group form">
-                        <label className="form-label">Email:</label>
-                        <input type="email" className="form-input" value={emailRegister} onChange={(e) => setEmailRegister(e.target.value)} />
+
+                      </div>
+                    
+                 
+                        <input type="email" placeholder="Email" className="form-input mt-3" value={emailRegister} onChange={(e) => setEmailRegister(e.target.value)} />
                         {errorEmail ? <p className="error-message">{errorEmail}</p> : null}
-                    </div>
-    
-                    <div className="form-group form">
-                        <label className="form-label">Phone Number:</label>
-                        <input type="number" className="form-input" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-                    </div>
-    
-                    <div className="form-group form">
-                        <label className="form-label">Birthday:</label>
-                        <input type="date" className="form-input" value={birthday} onChange={(e) => setBirthday(e.target.value)} />
-                    </div>
-    
-                    <div className="form-group form">
-                        <label className="form-label">Gender:</label>
-                        <select name="gender" id="" className="form-input" value={gender} onChange={(e) => setGender(e.target.value)}>
-                            <option value="Select">Select</option>
+                  
+                    
+                        <input type="tel" placeholder="Phone Number" className="form-input mt-3"  value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+                   
+
+                       <div className="coolinput2 mt-3">
+                        <label className="text2">Birthday:</label>
+                        <input  type="date" className="input2" value={birthday} onChange={(e) => setBirthday(e.target.value)} />
+                       </div>
+                        <select name="gender" id="" className="form-input mt-3" value={gender} onChange={(e) => setGender(e.target.value)}>
+                            <option disabled selected value="">Select your gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
+                            <option value="Other">Other</option>
                         </select>
-                    </div>
+                  
     
-                    <div className="form-group form">
+                    {/* <div className="form-group form">
                         <label className="form-label">Address:</label>
                         <input type="text" className="form-input" value={adress} onChange={(e) => setAdress(e.target.value)} />
                     </div>
@@ -264,16 +258,14 @@ const Login = () => {
                         <label className="form-label">City:</label>
                         <input type="text" className="form-input" value={city} onChange={(e) => setCity(e.target.value)} />
                     </div>
-    
-                    <div className="form-group form">
-                        <label className="form-label">Password:</label>
-                        <input type="password" className="form-input" value={passwordRegister} onChange={(e) => setPasswordRegister(e.target.value)} />
+     */}
+                  
+                        <input type="password" placeholder="Password" className="form-input mt-3" value={passwordRegister} onChange={(e) => setPasswordRegister(e.target.value)} />
                         {errorPassword ? <p className="error-message">{errorPassword}</p> : null}
-                    </div>
+            
     
-                    <div className="form-group form">
-                        <label className="form-label">Confirm Password:</label>
-                        <input type="password" className="form-input" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                 
+                        <input type="password" placeholder="Confirm Password" className="form-input mt-3" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                         {errorConfirmPassword ? <p className="error-message">{errorConfirmPassword}</p> : null}
                     </div>
     

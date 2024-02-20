@@ -6,7 +6,7 @@ import axios from 'axios';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import '@fortawesome/fontawesome-free/css/all.css';
-
+import './style/Dashboard.css';
 
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
@@ -155,7 +155,7 @@ const Dashboard = () => {
  
   <div className=" row d-flex justify-content-evenly" style={{marginTop:"75px",marginLeft:"4px" }}>
   <details className='row '> 
-  <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
+  <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#ededede0',border: '1px solid #dadada',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)'}}>
     <span className='m-2'>City</span>
     </summary>
 <div  className='row m-2'>
@@ -232,7 +232,7 @@ const Dashboard = () => {
 
    <div className=" row d-flex justify-content-evenly" style={{marginTop:"50px",marginLeft:"5px" }}>
     <details className='row'>
-    <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
+    <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#ededede0',border: '1px solid #dadada',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)'}}>
       <span className='m-2'>Brand</span>
 
       </summary>
@@ -293,29 +293,29 @@ const Dashboard = () => {
 
   <div className="row d-flex justify-content-evenly" style={{ marginTop: "50px", marginLeft: "4px" }}>
     <details className='row'>
-        <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
-        <span className='m-2' htmlFor='fuelToogle'>Fuel Type</span>
-        </summary>
+    <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#f0f0f0',border: '1px solid #ccc',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>
+  <span className='m-2' htmlFor='fuelToogle'>Fuel Type</span>
+</summary>
 
         <div className='row m-2'>
-            <label htmlFor="Diesel" >
-                <input className='m-2'  type="checkbox" id="Diesel" name="fuel" value="Diesel" onChange={filterPosts} checked={fuel.includes("Diesel")} />
+            <label htmlFor="Diesel" style={{ display: 'flex', alignItems: 'center' }} >
+                <input className='cyberpunk-checkbox m-2'  type="checkbox" id="Diesel" name="fuel" value="Diesel" onChange={filterPosts} checked={fuel.includes("Diesel")} />
                 Diesel
             </label>
             <label htmlFor="Gasoline" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='m-2' type="checkbox" id="Gasoline" name="fuel" value="Gasoline" onChange={filterPosts} checked={fuel.includes("Gasoline")} />
+                <input className='cyberpunk-checkbox m-2' type="checkbox" id="Gasoline" name="fuel" value="Gasoline" onChange={filterPosts} checked={fuel.includes("Gasoline")} />
                 Gasoline
             </label>
             <label htmlFor="Electricity" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='m-2' type="checkbox" id="Electricity" name="fuel" value="Electricity" onChange={filterPosts} checked={fuel.includes("Electricity")} />
+                <input className='cyberpunk-checkbox m-2' type="checkbox" id="Electricity" name="fuel" value="Electricity" onChange={filterPosts} checked={fuel.includes("Electricity")} />
                 Electricity
             </label>
             <label htmlFor="Gas" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='m-2' type="checkbox" id="Gas" name="fuel" value="Gas" onChange={filterPosts} checked={fuel.includes("Gas")} />
+                <input className='cyberpunk-checkbox m-2' type="checkbox" id="Gas" name="fuel" value="Gas" onChange={filterPosts} checked={fuel.includes("Gas")} />
                 Gas
             </label>
             <label htmlFor="ElectricityPetrol" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='m-2' type="checkbox" id="ElectricityPetrol" name="fuel" value="ElectricityPetrol" onChange={filterPosts} checked={fuel.includes("ElectricityPetrol")} />
+                <input className='cyberpunk-checkbox m-2' type="checkbox" id="ElectricityPetrol" name="fuel" value="ElectricityPetrol" onChange={filterPosts} checked={fuel.includes("ElectricityPetrol")} />
                 Hybrid
             </label>
         </div>
@@ -326,7 +326,7 @@ const Dashboard = () => {
 
   <div className=" row d-flex justify-content-evenly" style={{marginTop:"50px",marginLeft:"4px" }}>
     <details className='row'>
-    <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
+    <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#ededede0',border: '1px solid #dadada',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)'}}>
       <span className='m-2'>Year Model</span>
       </summary>
   <div className='row m-2'> 

@@ -1194,34 +1194,197 @@ a:focus {
 }
 
 
+
 .coolinput {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  position: static;
-  max-width: 240px;
+  width: 100%;
+position: relative;
+
 }
 
 .coolinput label.textinput {
-  font-size: smaller;
+  font-size: large;
   color: black;
   font-weight: 700;
   position: relative;
-  top: 1.9rem;
-  margin: 0 0 0 7px;
+  top: 1rem;
+  margin: 0 0 0 20px;
   padding: 0 3px;
   background: #ffffff;
   width: fit-content;
+  text-align: center;
+  line-height: 2rem; /* Adjust as needed for desired spacing */
+  vertical-align: bottom;
 }
 
+.coolinput label.textinput2 {
+  font-size: large;
+  color: black;
+  font-weight: 700;
+  position: relative;
+  top: 1rem;
+  margin: 0 0 0 100px;
+  padding: 0 3px;
+  background: #ffffff;
+  width: fit-content;
+  text-align: center;
+  line-height: 2rem; /* Adjust as needed for desired spacing */
+  vertical-align: bottom;
+}
+
+
 .coolinput input[type=text].input {
-  padding: 11px 10px;
-  font-size: 0.75rem;
-  border: 2px #171717 solid;
+
+  padding:  5px;
+  font-size: 0.85rem;
+  border: 1px #cccccc solid;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.coolinput select[type=text].input {
+
+  padding:  25px;
+  font-size: 0.85rem;
+  border: 1px #cccccc solid;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+
+.coolinput select[type=number].input {
+
+  font-size: 0.85rem;
+  border: 1px #cccccc solid;
+  border-radius: 5px;
+  background: #ffffff;
+  
+}
+.coolinput input[type=number].input {
+
+  font-size: 0.85rem;
+  border: 1px #cccccc solid;
+  border-radius: 5px;
+  background: #ffffff;
+}
+.coolinput input[type=tel].input {
+
+  font-size: 0.85rem;
+  border: 1px #cccccc solid;
+  border-radius: 5px;
+  background: #ffffff;
+}
+.coolinput input[type=textarea].input {
+
+  font-size: 0.85rem;
+  border: 1px #cccccc solid;
+  border-radius: 5px;
+  background: #ffffff;
+}
+  
+.coolinput input[type=file].input {
+
+  font-size: 0.85rem;
+  border: 1px #cccccc solid;
   border-radius: 5px;
   background: #ffffff;
 }
 
 .coolinput input[type=text].input:focus {
+  outline: none;
+}
+
+
+
+.coolinput2 .input2:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cyberpunk-checkbox {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #30cfd0;
+  border-radius: 5px;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cyberpunk-checkbox:before {
+  content: "";
+  background-color: #30cfd0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cyberpunk-checkbox:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cyberpunk-checkbox-label {
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.coolinput2 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  width: 100%;
+position: static;
+}
+.coolinput2 .text2 {
+  font-size: 0.75rem;
+  color: #757575;
+  font-weight: 500;
+  margin: -7px 1px 0 12px;
+  padding: 0 3px;
+  background: #ffffff;
+  width: fit-content;
+  position: absolute;
+}
+
+.coolinput2 .input2 {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 1px #cccccc solid;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.coolinput2 .input2:focus {
   outline: none;
 }
