@@ -143,13 +143,25 @@ const Dashboard = () => {
 
 
     
-    <div style={{ display: 'flex', alignItems: 'flex-start',marginTop:"80px" }}>
-  <div style={{ width: '20%', marginRight: '20px' }}>
-  <div className="position-relative overflow-auto ">
-  <label className='m-3'>City</label>
-  <div className='row m-2 d-flex justify-content-evenly'>
+    <div className="cd-main-content" style={{  display: 'flex', alignItems: 'flex-start',marginTop:"20px" , }}>
+		
 
-    <label  htmlFor="Tiranë">
+
+
+      {/* //filter/ */}
+
+  <div className="cd-filter" style={{ width: '20%', marginRight: '20px' }}>
+  <div className="position-relative overflow-auto ">
+ 
+  <div className=" row d-flex justify-content-evenly" style={{marginTop:"75px",marginLeft:"4px" }}>
+  <details className='row '> 
+  <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
+    <span className='m-2'>City</span>
+    </summary>
+<div  className='row m-2'>
+
+
+    <label   htmlFor="Tiranë">
       <input className='m-2' type="checkbox" id="Tiranë" name="qyteti" value="Tiranë" onChange={filterPosts} checked={qyteti.includes("Tiranë")} />
       Tiranë
     </label>
@@ -214,30 +226,16 @@ const Dashboard = () => {
       <input   className='m-2'type="checkbox" id="Krujë" name="qyteti" value="Krujë" onChange={filterPosts} checked={qyteti.includes("Krujë")} />
       Krujë
     </label>
-
-      
-
-      
-
+    </div>
+    </details>
   </div>
 
-  <div>
-  <label className='m-3'>Fuel Type</label>
-  <div className='row m-2'>
-      <label htmlFor="Diesel">
-      <input  className='m-2' type="checkbox" id="Diesel" name="fuel" value="Diesel" onChange={filterPosts} checked={fuel.includes("Diesel")} />
-      Diesel</label>
-      <label htmlFor="Gasoline">
-      <input  className='m-2' type="checkbox" id="Gasoline" name="fuel" value="Gasoline" onChange={filterPosts} checked={fuel.includes("Gasoline")} />
-      Gasoline</label>
-      <label htmlFor="Electricity">
-      <input  className='m-2' type="checkbox" id="Electricity" name="fuel" value="Electricity" onChange={filterPosts} checked={fuel.includes("Electricity")} />
-      Electricity</label>
-      </div>
-  </div>
+   <div className=" row d-flex justify-content-evenly" style={{marginTop:"50px",marginLeft:"5px" }}>
+    <details className='row'>
+    <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
+      <span className='m-2'>Brand</span>
 
-  <div>
-  <label className='m-3'>Brand</label>
+      </summary>
   <div className='row m-2'>
       
       <label htmlFor="Audi">
@@ -287,89 +285,54 @@ const Dashboard = () => {
         Ferrari
       </label>
       </div>
+      </details>
 
   </div>
 
 
 
-  <div>
-  <label className='m-3'>Year Model</label>
+  <div className="row d-flex justify-content-evenly" style={{ marginTop: "50px", marginLeft: "4px" }}>
+    <details className='row'>
+        <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
+        <span className='m-2' htmlFor='fuelToogle'>Fuel Type</span>
+        </summary>
+
+        <div className='row m-2'>
+            <label htmlFor="Diesel" >
+                <input className='m-2'  type="checkbox" id="Diesel" name="fuel" value="Diesel" onChange={filterPosts} checked={fuel.includes("Diesel")} />
+                Diesel
+            </label>
+            <label htmlFor="Gasoline" style={{ display: 'flex', alignItems: 'center' }}>
+                <input className='m-2' type="checkbox" id="Gasoline" name="fuel" value="Gasoline" onChange={filterPosts} checked={fuel.includes("Gasoline")} />
+                Gasoline
+            </label>
+            <label htmlFor="Electricity" style={{ display: 'flex', alignItems: 'center' }}>
+                <input className='m-2' type="checkbox" id="Electricity" name="fuel" value="Electricity" onChange={filterPosts} checked={fuel.includes("Electricity")} />
+                Electricity
+            </label>
+            <label htmlFor="Gas" style={{ display: 'flex', alignItems: 'center' }}>
+                <input className='m-2' type="checkbox" id="Gas" name="fuel" value="Gas" onChange={filterPosts} checked={fuel.includes("Gas")} />
+                Gas
+            </label>
+            <label htmlFor="ElectricityPetrol" style={{ display: 'flex', alignItems: 'center' }}>
+                <input className='m-2' type="checkbox" id="ElectricityPetrol" name="fuel" value="ElectricityPetrol" onChange={filterPosts} checked={fuel.includes("ElectricityPetrol")} />
+                Hybrid
+            </label>
+        </div>
+    </details>
+</div>
+
+
+
+  <div className=" row d-flex justify-content-evenly" style={{marginTop:"50px",marginLeft:"4px" }}>
+    <details className='row'>
+    <summary style={{ cursor: 'pointer', padding: '0.5rem 1rem', backgroundColor: '#f0f0f0', border: '1px solid #ccc', borderRadius: '4px', marginBottom: '10px' }}>
+      <span className='m-2'>Year Model</span>
+      </summary>
   <div className='row m-2'> 
-      <label htmlFor="2008">
-        <input  className='m-2' type="checkbox" id="2008" name="vitiProdhimit" value="2008" onChange={filterPosts} checked={vitiProdhimit.includes("2008")} />
-        2008
-       </label>
-     <label htmlFor="2009">
-        <input  className='m-2' type="checkbox" id="2009" name="vitiProdhimit" value="2009" onChange={filterPosts} checked={vitiProdhimit.includes("2009")}/>
-        2009
-      </label>
-    <label htmlFor="2010">
-        <input  className='m-2' type="checkbox" id="2010" name="vitiProdhimit" value="2010" onChange={filterPosts} checked={vitiProdhimit.includes("2010")} />
-        2010
-      </label>
-    <label htmlFor="2011">
-        <input  className='m-2' type="checkbox" id="2011" name="vitiProdhimit" value="2011" onChange={filterPosts} checked={vitiProdhimit.includes("2011")} />
-        2011
-      </label>
-
-    <label htmlFor="2012">
-        <input  className='m-2' type="checkbox" id="2012" name="vitiProdhimit" value="2012" onChange={filterPosts}checked={vitiProdhimit.includes("2012")}/>
-        2012
-      </label>
-   <label htmlFor="2013">
-        <input  className='m-2' type="checkbox" id="2013" name="vitiProdhimit" value="2013" onChange={filterPosts} checked={vitiProdhimit.includes("20013")} />
-        2013
-      </label>
-    <label htmlFor="2014">
-        <input  className='m-2' type="checkbox" id="2014" name="vitiProdhimit" value="2014" onChange={filterPosts} checked={vitiProdhimit.includes("2014")} />
-        2014
-      </label>
-      <label htmlFor="2015">
-        <input  className='m-2' type="checkbox" id="2015" name="vitiProdhimit" value="2015" onChange={filterPosts} checked={vitiProdhimit.includes("2015")}/>
-        2015
-      </label>
-      <label htmlFor="2016">
-        <input  className='m-2' type="checkbox" id="2016" name="vitiProdhimit" value="2016" onChange={filterPosts} checked={vitiProdhimit.includes("2016")}/>
-        2016
-      </label>
-      <label htmlFor="2017">
-        <input  className='m-2' type="checkbox" id="2017" name="vitiProdhimit" value="2017" onChange={filterPosts} checked={vitiProdhimit.includes("2017")}/>
-        2017 
-      </label>
-      <label htmlFor="2018">
-        <input   className='m-2'type="checkbox" id="2018" name="vitiProdhimit" value="2018" onChange={filterPosts} checked={vitiProdhimit.includes("2018")} />
-        2018
-      </label>
-      <label htmlFor="2019">
-        <input  className='m-2' type="checkbox" id="2019" name="vitiProdhimit" value="2019" onChange={filterPosts} checked={vitiProdhimit.includes("2019")} />
-        2019
-      </label>
-      <label htmlFor="2020">
-        <input  className='m-2' type="checkbox" id="2020" name="vitiProdhimit" value="2020" onChange={filterPosts} checked={vitiProdhimit.includes("2020")}/>
-        2020
-      </label>
-      <label htmlFor="2021">
-        <input  className='m-2' type="checkbox" id="2021" name="vitiProdhimit" value="2021" onChange={filterPosts} checked={vitiProdhimit.includes("2021")} />
-        2021
-      </label>
-      <label htmlFor="2022">
-        <input  className='m-2' type="checkbox" id="2022" name="vitiProdhimit" value="2022" onChange={filterPosts} checked={vitiProdhimit.includes("2022")}/>
-        2022
-      </label>
-      <label htmlFor="2023">
-        <input  className='m-2' type="checkbox" id="2023" name="vitiProdhimit" value="2023" onChange={filterPosts} checked={vitiProdhimit.includes("2023")} />
-        2023
-        </label>
-        <label htmlFor="2024">
-        <input  className='m-2' type="checkbox" id="2024" name="vitiProdhimit" value="2024" onChange={filterPosts} checked={vitiProdhimit.includes("2024")} />
-        2024
-        </label>
-  </div>
-
-
-  {/* <div className='row m-2'> 
+  <label className=''></label>
     {[...Array(2024-2008+1)].map((_, index) => {
-        const year = 2008 + index;
+        const year = 2024 - index;
         return (
             <label key={year} htmlFor={year}>
                 <input  
@@ -385,22 +348,36 @@ const Dashboard = () => {
             </label>
         );
     })}
-</div> */}
   </div>
-  <button className="ressetButton m-4" onClick={handleReset}>Reset</button>
+  </details>
+
+
+  </div>
+
+
+    <button className="ressetButton m-4" onClick={handleReset}>Reset</button>
 </div>
 
 
                     </div>
+
+
+
+
+
+
+
+                    {/* Dashboard */}
   <div style={{ width: '70%' }}>
 
-      <div className="container-fluid py-2">
+
+      <div className="container-fluid ">
         <div className="container pt-5 pb-3">
             <h1 className="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
-            <div className="row">
+            <div className="cd-gallery  row">
             {posts.map(post => (
 
-                <div className="col-lg-4 col-md-6 mb-2">
+                <div className="cd-gallery col-lg-4 col-md-6 mb-2">
                     <div className="rent-item mb-4 d-flex flex-column justify-content-between align-items-center" style={{height:"450px"}}>
                         <img className="img-fluid mb-4" width="300px" height="300px"  src={post.image} alt="Car" style={{width:"80%", height:"50%"}}/>
                         <h4 className="text-uppercase mb-4"> 

@@ -408,79 +408,74 @@ const Form = (props) => {
 
       <form className="create-form" style={{ marginTop: "60px" }} onSubmit={CreateCar}>
         <div className="containe">
-          <div className="col-md-6 " style={{ marginLeft: "300px" }} >
-         <div className="grid">
 
-          
-         <div className="form-group">
-              <label htmlFor="targa">Number Plate</label>
-              <input type="text" className="form-control" id="targa" value={targa} onChange={(e) => setTarga(e.target.value)} />
-            </div>
-            <div className="form-group ">
-              <label htmlFor="shasia " className="mr-2">Chassis Nr.</label>
-              <input type="text" className="form-control" id="shasia" value={shasia} onChange={(e) => setShasia(e.target.value)} />
+            <div className="col-md-6 " style={{marginLeft:"300px"}} >
+              
+              <div className="form-group">
+                <label htmlFor="targa">Number Plate</label>
+                <input type="text" className="form-control"id="targa" value={targa} onChange={(e) => setTarga(e.target.value)} />
+              </div>
+              <div className="form-group ">
+                <label htmlFor="shasia " className="mr-2">Chassis Nr.</label>
+                <input type="text" className="form-control" id="shasia" value={shasia} onChange={(e) => setShasia(e.target.value)} />
+               
+              </div>
+              <div className="form-group">
+                <label htmlFor="vitiProdhimit">Year Model</label>
+                <select type="text" className="form-control" id="vitiProdhimit" value={vitiProdhimit} onChange={(e) => setVitiProdhimit(e.target.value)} >
+                  <option value="" disabled>Select a year</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+                  <option value="2011">2011</option>
+                  <option value="2010">2010</option>
+                  <option value="2009">2009</option>
+                  <option value="2008">2008</option>
+                  </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="brandi">Brand</label>
+                <select
+                  id="selectedBrand" value={selectedBrand} onChange={(e)=>setSelectedBrand(e.target.value)} className="form-control" >
+                 
+                  <option value="">Brand Model</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Mercedes-Benz">Mercedes-Benz</option>
+                  <option value="Audi">Audi</option>
 
-            </div>
+                  <option value="Tesla">Tesla</option>
+                  <option value="Ferrari">Ferrari</option>
+                  <option value="Ford">Ford</option>
+                  <option value="Porsche">Porsche</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Lamborghini">Lamborghini</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Bently">Bently</option>
+                  <option value="Maserati">Maserati</option>
+                  <option value="Jeep">Jeep</option>
+                  <option value="Subaru">Subaru</option>
+                  <option value="Cadillac">Cadillac</option>
+                  <option value="Chrysler">Chrysler</option>
+                  <option value="Chevrolet Corvette">Chevrolet Corvette</option>
+                  <option value="Dodge">Dodge</option>
+                  <option value="Hyundai">Hyundai</option>
+                  <option value="Jaguar">Jaguar</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Ford Mustand">Ford Mustand</option>
+                  <option value="Nissan">Nissan</option>
+                  <option value="Alfa Romeo">Alfa Romeo</option>
+                                      {/* <option value="Bugatti">Bugatti</option>
 
-
-
-         </div>
-         
-            <div className="form-group">
-              <label htmlFor="vitiProdhimit">Year Model</label>
-              <select type="text" className="form-control" id="vitiProdhimit" value={vitiProdhimit} onChange={(e) => setVitiProdhimit(e.target.value)} >
-                <option value="" disabled>Select a year</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-                <option value="2014">2014</option>
-                <option value="2013">2013</option>
-                <option value="2012">2012</option>
-                <option value="2011">2011</option>
-                <option value="2010">2010</option>
-                <option value="2009">2009</option>
-                <option value="2008">2008</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="brandi">Brand</label>
-              <select
-                id="selectedBrand" value={selectedBrand} onChange={(e) => setSelectedBrand(e.target.value)} className="form-control" >
-
-                <option value="">Brand Model</option>
-                <option value="BMW">BMW</option>
-                <option value="Mercedes-Benz">Mercedes-Benz</option>
-                <option value="Audi">Audi</option>
-
-                <option value="Tesla">Tesla</option>
-                <option value="Ferrari">Ferrari</option>
-                <option value="Ford">Ford</option>
-                <option value="Porsche">Porsche</option>
-                <option value="Honda">Honda</option>
-                <option value="Lamborghini">Lamborghini</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Bently">Bently</option>
-                <option value="Maserati">Maserati</option>
-                <option value="Jeep">Jeep</option>
-                <option value="Subaru">Subaru</option>
-                <option value="Cadillac">Cadillac</option>
-                <option value="Chrysler">Chrysler</option>
-                <option value="Chevrolet Corvette">Chevrolet Corvette</option>
-                <option value="Dodge">Dodge</option>
-                <option value="Hyundai">Hyundai</option>
-                <option value="Jaguar">Jaguar</option>
-                <option value="Mazda">Mazda</option>
-                <option value="Ford Mustand">Ford Mustand</option>
-                <option value="Nissan">Nissan</option>
-                <option value="Alfa Romeo">Alfa Romeo</option>
-                {/* <option value="Bugatti">Bugatti</option>
                       <option value="Buick">Buick</option>
                       <option value="Lexus">Lexus</option>
                       <option value="Rolls-Royce">Rolls-Royce</option>

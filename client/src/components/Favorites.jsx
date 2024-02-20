@@ -51,7 +51,7 @@ const Favorites = () => {
       {
   form && form.map((item, index) => {
     return (
-      <div key={index} className="card m-3 d-flex  flex-row" style={{ width: "20rem", }}>
+      <div key={index} className="cardFavorites m-3 d-flex  flex-row" style={{ width: "20rem", }}>
         <img 
           src={item.image || placeholderImage}
           className="card-img-top"

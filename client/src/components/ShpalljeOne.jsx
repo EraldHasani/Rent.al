@@ -112,53 +112,64 @@ const handleEZene = () => {
   
 
 
-  <div className='announcement'>
+
+    <div style={{ width: '70%', margin: 'auto' }}>
     <h2>Announcement</h2>
     {
     posts&& (
-      <div className='announcement-info' >
-      <h4>{posts.destinacioni}</h4>
-        <p>Description: {posts.pershkrimi}</p>
-        <p>Daily Price: {posts.cmimiDitor}</p>
-        <p>Reservation Day : {posts.dataRezervimit}</p>
+      <div style={{ display: 'grid',  marginTop: '100px' }}>
+      <div className="cardResevation" style={{ padding: '20px', backgroundColor: '#f9f9f9', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+        <h4>{posts.destinacioni}</h4>
+        <p className="mb-4">Description: {posts.pershkrimi}</p>
+        <p className="mb-3"><strong>Daily Price:</strong> <span className="text-primary">{posts.cmimiDitor}€</span></p>
+        <p className="mb-2"><strong> Day:</strong> <span className="text-success">{posts.dataRezervimit ? new Date(posts.dataRezervimit).toLocaleDateString() : null}</span></p>
+
+  
       </div>
+    </div>
       )
 
     }
-     <div classname="announcement-actions">
-     {
-    logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) ? (
-        <button onClick={MerrPjese}>Participate</button>
-    ) : null
-}
-{
-    logedUser && posts  &&  logedUser._id=== posts.userId && posts.eMbyllur ? (
-        <button onClick={handleELire}>Make Available</button>
-    ) : null
-}
 
-      {
-   logedUser && posts  && logedUser._id=== posts.userId && !posts.eMbyllur ? (
-        <button onClick={handleEZene}>Make Occupied</button>
-    ) : null
-}
+     
+     {logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) && (
+    <button className="btn btn-primary m-3" onClick={MerrPjese}>Participate</button>
+  )}
+
+  {logedUser && posts && logedUser._id === posts.userId && posts.eMbyllur && (
+    <button className="btn btn-success m-3" onClick={handleELire}>Make Available</button>
+  )}
+
+  {logedUser && posts && logedUser._id === posts.userId && !posts.eMbyllur && (
+    <button className="btn btn-warning m-3" onClick={handleEZene}>Make Occupied</button>
+  )}
+
+<h3 className="mt-5">Participants</h3>
+  {posts && posts.users.length > 0 && (
+    <table className="table mt-2">
+      <thead>
+        <tr>
+          <th></th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {posts.users.map((user, index) => (
+          <tr key={index}>
+            <td>{index + 1}</td>
+            <td>{user.firstName}</td>
+            <td>{user.lastName}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
 </div>
-      <h3>Participants</h3>
-      <ul className="participants-list">
-      {
-        posts && posts.users.map((user, index) => {
-          return (
-            <li key={index}>
-              <p>{user.firstName} {user.lastName}</p>
-            </li>
-          )
-        })
-      }
-      </ul>
-
-    </div>
-    
   
+
+
+
 
     
     </>
