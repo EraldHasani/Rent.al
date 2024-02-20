@@ -111,7 +111,7 @@ const handleEZene = () => {
   
 
 
-  <div style={{ width: '70%' }}>
+    <div style={{ width: '70%', margin: 'auto' }}>
     <h2>Announcement</h2>
     {
     posts&& (
@@ -119,43 +119,50 @@ const handleEZene = () => {
       <h4>{posts.destinacioni}</h4>
         <p>Description: {posts.pershkrimi}</p>
         <p>Daily Price: {posts.cmimiDitor}</p>
-        <p>Reservation Day : {posts.dataRezervimit}</p>
+        <p className="regular-text fs-6">Reservation Day : {posts.dataRezervimit ? new Date(posts.dataRezervimit).toLocaleDateString() : null}</p>
       </div>
       )
 
     }
      
-     {
-    logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) ? (
-        <button onClick={MerrPjese}>Participate</button>
-    ) : null
-}
-{
-    logedUser && posts  &&  logedUser._id=== posts.userId && posts.eMbyllur ? (
-        <button onClick={handleELire}>Make Available</button>
-    ) : null
-}
+     {logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) && (
+    <button className="btn btn-primary mt-3" onClick={MerrPjese}>Participate</button>
+  )}
 
-      {
-   logedUser && posts  && logedUser._id=== posts.userId && !posts.eMbyllur ? (
-        <button onClick={handleEZene}>Make Occupied</button>
-    ) : null
-}
+  {logedUser && posts && logedUser._id === posts.userId && posts.eMbyllur && (
+    <button className="btn btn-success mt-3" onClick={handleELire}>Make Available</button>
+  )}
 
-      <h3>Participants</h3>
-      {
-        posts && posts.users.map((user, index) => {
-          return (
-            <div key={index}>
-              <p>{user.firstName} {user.lastName}</p>
-            </div>
-          )
-        })
-      }
+  {logedUser && posts && logedUser._id === posts.userId && !posts.eMbyllur && (
+    <button className="btn btn-warning mt-3" onClick={handleEZene}>Make Occupied</button>
+  )}
 
-    </div>
-    
+<h3 className="mt-5">Participants</h3>
+  {posts && posts.users.length > 0 && (
+    <table className="table mt-2">
+      <thead>
+        <tr>
+          <th></th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {posts.users.map((user, index) => (
+          <tr key={index}>
+            <td>{index + 1}</td>
+            <td>{user.firstName}</td>
+            <td>{user.lastName}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
+</div>
   
+
+
+ 
 
     
     </>

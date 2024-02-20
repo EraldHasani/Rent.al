@@ -404,6 +404,7 @@ const Form = (props) => {
       <form style={{marginTop:"60px"}} onSubmit={CreateCar}>
         <div className="containe">
             <div className="col-md-6 " style={{marginLeft:"300px"}} >
+              
               <div className="form-group">
                 <label htmlFor="targa">Number Plate</label>
                 <input type="text" className="form-control"id="targa" value={targa} onChange={(e) => setTarga(e.target.value)} />

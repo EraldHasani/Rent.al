@@ -156,7 +156,7 @@ const handleEZene = () => {
         <button
                   data-bs-toggle="modal"
                   data-bs-target="#RentModal"
-                  className="btn bg-color custom-btn bordered mt-3"
+                  className="btn bg-color custom-btn bordered mt-3 "
                 >
                   Rent
                 </button>
@@ -173,7 +173,7 @@ const handleEZene = () => {
         aria-hidden="true"
       >
         <div className="modal-dialog" role="document">
-          <div className="modal-content">
+          <div className="modal-content ">
             <div className="modal-header">
               <h2 className="modal-title" id="membershipFormLabel">
               Rent
@@ -207,6 +207,7 @@ const handleEZene = () => {
                   className="form-control mb-3"
                   placeholder="Reservation Day"
                   value={DataMarrjes}
+                  min={new Date().toISOString().split('T')[0]} // Set the min attribute to today's date
                   onChange={(e) => setDataMarrjes(e.target.value)}
                 />
 
