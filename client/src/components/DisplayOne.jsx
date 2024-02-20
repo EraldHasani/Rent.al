@@ -257,7 +257,7 @@ const handleEZene = () => {
             <img
               src={form.image || placeholderImage}
               alt={form.brandi || "Car Image"}
-              style={{ width: "65%", height:"450px", borderRadius: "8px", marginLeft:"17%" }}
+              style={{ width: "65%", height:"450px", borderRadius: "8px", marginLeft:"17%" ,objectFit: "cover"}}
             />
           )}
           <div >
