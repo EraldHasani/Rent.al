@@ -416,7 +416,7 @@ const handleEZene = () => {
           </div>
         ))}
       
-   
+{/*    
       <h3 className="border-bottom ">Driver Assistance</h3>
 
       {form.driverAssistance &&
@@ -428,7 +428,7 @@ const handleEZene = () => {
               </div>
             )}
           </div>
-        ))}
+        ))} */}
        
   
      <h3 className="border-bottom ">Interior</h3>
@@ -484,7 +484,7 @@ const handleEZene = () => {
           </div>
         ))}
 
-    <h3 className="border-bottom ">Engine Drive</h3>
+    {/* <h3 className="border-bottom ">Engine Drive</h3>
 
       {form.engineDrive &&
         Object.keys(form.engineDrive).map((item) => (
@@ -495,7 +495,7 @@ const handleEZene = () => {
               </div>
             )}
           </div>
-        ))}
+        ))} */}
 
        
 
