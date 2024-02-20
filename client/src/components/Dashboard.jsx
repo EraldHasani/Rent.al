@@ -143,7 +143,7 @@ const Dashboard = () => {
 
 
     
-    <div style={{ display: 'flex', alignItems: 'flex-start',marginTop:"100px" }}>
+    <div style={{ display: 'flex', alignItems: 'flex-start',marginTop:"80px" }}>
   <div style={{ width: '20%', marginRight: '20px' }}>
   <div className="position-relative overflow-auto ">
   <label className='m-3'>City</label>
@@ -394,7 +394,7 @@ const Dashboard = () => {
                     </div>
   <div style={{ width: '70%' }}>
 
-      <div className="container-fluid py-5">
+      <div className="container-fluid py-2">
         <div className="container pt-5 pb-3">
             <h1 className="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
             <div className="row">

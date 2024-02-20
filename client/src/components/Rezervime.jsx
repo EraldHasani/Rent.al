@@ -66,43 +66,55 @@ const [updated, setUpdated] = useState(false);
     
       <div >
       <Navbar />
-<div className="containe" style={{margin:"100px",width:"85%"}}>
+<div className="" style={{margin:"100px",width:"85%"}}>
 
-
+<h1 className="border-bottom" >Reservation</h1>
 
   {
     
     form && form.map((item, index) => {
       return (
-        <div className="cardReservation "  style={{width:"75%",margin:"40px"}} key={index}>
+        <div className="cardReservation "  style={{width:"90%",margin:"40px"}} key={index}>
         <div className="">
-        <div className="border p-4 d-flex justify-content-evenly">
+        <div className=" p-4 m-2 d-flex justify-content-evenly">
+        
            <p><Link to={`/form/${item.formId}`} className=" text-center">
-              {item.targa || "Placeholder Name"}
+           <span className="fw-bolder fs-2" >     {item.targa || "Placeholder Name"} </span>
             </Link></p> 
+            <p className="text-center">
+            <span className="fw-bold">    Per Day Price </span>
+             <br />
+             {item.cmimiDitor  || null}€
+            </p>
+            <p className="text-center">
+          <span className="fw-bold">  Reservation Day  </span>
+            <br /> 
+            {item.dataRezervimit ? new Date(item.dataRezervimit).toLocaleDateString() : null}
+            </p>
+            <p className="text-center">
+            <span className="fw-bold">    Days </span>
+              <br /> 
+              {item.ditet || null}
+            </p>
+            
             <p  className="text-center">
-             Total Price  <br />{item.cmimiTotal || null}
+
+            <span className="fw-bold">   Total Price </span>
+              <br />{item.cmimiTotal || null}€
             </p>
            
-            <p className="text-center">
-            Reservation Day <br /> {item.dataRezervimit ? new Date(item.dataRezervimit).toLocaleDateString() : null}
-            </p>
-            <p className="text-center">
-              Days <br /> {item.ditet || null}
-            </p>
-            <p className="text-center">
-            Per Day Price <br />{item.cmimiDitor || null}
-            </p>
+            
            
            
           </div>
+         
         </div>
        
          
           <button
                   data-bs-toggle="modal"
                   data-bs-target={`#loginModal-${index}`} 
-                  className="btn bg-color custom-btn bordered mt-3"
+                  className="card-button custom-btn bordered  m-2"
                 >
                   Create Reservation Post
                 </button>

@@ -43,9 +43,9 @@ const Favorites = () => {
     
       <div>
       <Navbar />
-      <h1 className="border-bottom" style={{margin:"100px"}}>Favourites</h1>
+      <h1 className="border-bottom" style={{marginLeft:"100px",marginTop:"100px"}}>Favourites</h1>
 
-      <div className="grid" style={{  margin:"130px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(18rem, 1fr))", gap: "20px" }}>
+      <div className="grid" style={{  marginLeft:"130px", marginRight:"130px",display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(18rem, 1fr))", gap: "20px" }}>
 
 
       {

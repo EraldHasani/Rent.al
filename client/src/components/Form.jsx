@@ -401,7 +401,7 @@ const Form = (props) => {
       </header>
 
 
-      <form onSubmit={CreateCar}>
+      <form style={{marginTop:"60px"}} onSubmit={CreateCar}>
         <div className="containe">
             <div className="col-md-6 " style={{marginLeft:"300px"}} >
               <div className="form-group">

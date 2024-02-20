@@ -509,8 +509,8 @@ const handleEZene = () => {
           <div className="d-flex justify-content-around">
             <button
               onClick={() => navigate(-1)}
-              className="btn btn-outline-success mt-4"
-            >
+              className="btn bg-color custom-btn bordered mt-3"
+              >
               Go Back
             </button>
           </div>
