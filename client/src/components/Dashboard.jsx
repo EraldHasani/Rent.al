@@ -143,7 +143,7 @@ const Dashboard = () => {
 
 
     
-    <div style={{ display: 'flex', alignItems: 'flex-start',marginTop:"100px" }}>
+    <div style={{ display: 'flex', alignItems: 'flex-start',marginTop:"80px" }}>
   <div style={{ width: '20%', marginRight: '20px' }}>
   <div className="position-relative overflow-auto ">
   <label className='m-3'>City</label>
@@ -394,7 +394,7 @@ const Dashboard = () => {
                     </div>
   <div style={{ width: '70%' }}>
 
-      <div className="container-fluid py-5">
+      <div className="container-fluid py-2">
         <div className="container pt-5 pb-3">
             <h1 className="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
             <div className="row">
@@ -402,7 +402,7 @@ const Dashboard = () => {
 
                 <div className="col-lg-4 col-md-6 mb-2">
                     <div className="rent-item mb-4 d-flex flex-column justify-content-between align-items-center" style={{height:"450px"}}>
-                        <img className="img-fluid mb-4" width="300px" height="300px"  src={post.image} alt="Car"/>
+                        <img className="img-fluid mb-4" width="300px" height="300px"  src={post.image} alt="Car" style={{width:"80%", height:"50%"}}/>
                         <h4 className="text-uppercase mb-4"> 
                         <Link to={`/form/${post._id}`}>
                                 {post.brandi}

@@ -48,7 +48,7 @@ const Navbar = (props) => {
 <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container">
 
-            <a className="navbar-brand" href="index.html">Rent.al</a>
+            <a className="navbar-brand" href="dashboard">Rent.al</a>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">

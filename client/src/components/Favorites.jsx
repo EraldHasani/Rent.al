@@ -3,6 +3,8 @@ import { useNavigate, useParams ,Link} from "react-router-dom";
 import axios from "axios";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { TbManualGearbox } from "react-icons/tb";
+
 
 const Favorites = () => {
   const { id } = useParams();
@@ -41,18 +43,20 @@ const Favorites = () => {
     
       <div>
       <Navbar />
-      <div className="grid" style={{ marginTop: "100px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(18rem, 1fr))", gap: "20px" }}>
+      <h1 className="border-bottom" style={{marginLeft:"100px",marginTop:"100px"}}>Favourites</h1>
+
+      <div className="grid" style={{  marginLeft:"130px", marginRight:"130px",display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(18rem, 1fr))", gap: "20px" }}>
 
 
       {
   form && form.map((item, index) => {
     return (
-      <div key={index} className="card m-3" style={{ width: "18rem", }}>
+      <div key={index} className="card m-3 d-flex  flex-row" style={{ width: "20rem", }}>
         <img 
           src={item.image || placeholderImage}
           className="card-img-top"
           alt={item.brandi || "Car Image"}
-          style={{ width:"100%", height:"150px", borderRadius: "8px" }}
+          style={{ width:"50%", height:"100%" }}
         />
         <div className="card-body">
           <h5 className="card-title text-center">
@@ -60,9 +64,10 @@ const Favorites = () => {
               {item.brandi || "Placeholder Name"}
             </Link>
           </h5>
-          <p className="card-text text-center">
-            Details: {item.gearbox || "Placeholder Details"}
-          </p>
+          <div className="card-text text-center">
+            <p>  {item.modeli} </p>
+             <p><TbManualGearbox />{item.gearbox }</p>
+          </div>
         </div>
              
       </div>

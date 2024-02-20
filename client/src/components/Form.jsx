@@ -401,7 +401,7 @@ const Form = (props) => {
       </header>
 
 
-      <form onSubmit={CreateCar}>
+      <form style={{marginTop:"60px"}} onSubmit={CreateCar}>
         <div className="containe">
             <div className="col-md-6 " style={{marginLeft:"300px"}} >
               <div className="form-group">
@@ -679,8 +679,8 @@ const Form = (props) => {
                   <label  htmlFor="gearbox">Gearbox</label>
                   <select className="form-control" name="" id="" value={gearbox} onChange={(e)=>setGearbox(e.target.value)}>
                     <option value="" disabled> Gearbox</option>
-                    <option value="automatike">Automatic</option>
-                    <option value="manuale">Manual</option>
+                    <option value="automatic">Automatic</option>
+                    <option value="manual">Manual</option>
                     <option value="Semi-automatic">Semi-automatic</option>
                   </select>
                 </div>

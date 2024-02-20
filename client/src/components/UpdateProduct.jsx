@@ -137,7 +137,11 @@ const UpdateProduct = (props) => {
   useEffect(() => {
     axios.get(`http://localhost:8000/forms/${id}`, {
         withCredentials: true,
-  } )
+  },{
+    headers: {
+     
+      'Content-Type': 'multipart/form-data'
+  }} )
     .then((res) => {
       console.log(res.data);
       setTarga(res.data.targa);
@@ -226,7 +230,7 @@ const UpdateProduct = (props) => {
       kilometrat,
       carDamage,
       damageDetails,
-      image,
+   image: image.name,image,
       imageDescription,
       description,
       price,
@@ -362,6 +366,7 @@ const UpdateProduct = (props) => {
       setContactInfo("");
       setStreetAddress("");
       setNumber("");
+
       navigate("/myprofile");
     }
   })
@@ -1462,8 +1467,8 @@ const UpdateProduct = (props) => {
             <div>
               <h1 className="m-4">Pictures and Description</h1>
               <div>
-                <label htmlFor="image">ImageS</label>
-                <input type="text" multiple name="image" className="form-control" onChange={(e) => setImage(e.target.value)} placeholder="Please add one display image " />
+                <label htmlFor="image">Image</label>
+                <input type="file" className="form-control" onChange={(e) => setImage(e.target.files[0])} placeholder="Please add one display image " />
               </div>
             </div>
 
