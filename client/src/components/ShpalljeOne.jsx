@@ -5,6 +5,7 @@ import { Link,useParams } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "./style/ShpalljeOne.css"
 
 
 const ShpalljeOne = () => {
@@ -111,11 +112,11 @@ const handleEZene = () => {
   
 
 
-  <div style={{ width: '70%' }}>
+  <div className='announcement'>
     <h2>Announcement</h2>
     {
     posts&& (
-      <div  style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px', marginTop:"100px" }}>
+      <div className='announcement-info' >
       <h4>{posts.destinacioni}</h4>
         <p>Description: {posts.pershkrimi}</p>
         <p>Daily Price: {posts.cmimiDitor}</p>
@@ -124,7 +125,7 @@ const handleEZene = () => {
       )
 
     }
-     
+     <div classname="announcement-actions">
      {
     logedUser && posts && !posts.users.some(user => user.userId === logedUser._id) ? (
         <button onClick={MerrPjese}>Participate</button>
@@ -141,17 +142,19 @@ const handleEZene = () => {
         <button onClick={handleEZene}>Make Occupied</button>
     ) : null
 }
-
+</div>
       <h3>Participants</h3>
+      <ul className="participants-list">
       {
         posts && posts.users.map((user, index) => {
           return (
-            <div key={index}>
+            <li key={index}>
               <p>{user.firstName} {user.lastName}</p>
-            </div>
+            </li>
           )
         })
       }
+      </ul>
 
     </div>
     

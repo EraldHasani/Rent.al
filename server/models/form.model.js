@@ -97,54 +97,48 @@ const Form = new mongoose.Schema({
     },
     interiorColor: String,
     exterior: {
-        electricalMirrors: {
-            type: Boolean,
-        },
-        hangerFixedHook: {
-            type: Boolean,
-        },
-        ledLights: {
-            type: Boolean,
-        },
-        metallicPaint: {
-            type: Boolean,
-        },
-        winterWheels: {
-            type: Boolean,
-        },
-        allSeasonTires: {
-            type: Boolean,
-        },
-        laserLight: {
-            type: Boolean,
-        },
-        lightweightRimSummer: {
-            type: Boolean,
-        },
-        summerWheels: {
-            type: Boolean,
-        },
-        xenonLights: {
-            type: Boolean,
-        },
-        trailerAttachment: {
-            type: Boolean,
-        },
-        cargoHolders: {
-            type: Boolean,
-        },
-        lightweightRimWinter: {
-            type: Boolean,
-        },
-        roofRails: {
-            type: Boolean,
-        }
-    },
-    driverAssistance: {
-        highBeamAssistant: {
-            type: Boolean,
-            default: false
-        },
+        // electricalMirrors: {
+        //     type: Boolean,
+        // },
+        // hangerFixedHook: {
+        //     type: Boolean,
+        // },
+        // ledLights: {
+        //     type: Boolean,
+        // },
+        // metallicPaint: {
+        //     type: Boolean,
+        // },
+        // winterWheels: {
+        //     type: Boolean,
+        // },
+        // allSeasonTires: {
+        //     type: Boolean,
+        // },
+        // laserLight: {
+        //     type: Boolean,
+        // },
+        // lightweightRimSummer: {
+        //     type: Boolean,
+        // },
+        // summerWheels: {
+        //     type: Boolean,
+        // },
+        // xenonLights: {
+        //     type: Boolean,
+        // },
+        // trailerAttachment: {
+        //     type: Boolean,
+        // },
+        // cargoHolders: {
+        //     type: Boolean,
+        // },
+        // lightweightRimWinter: {
+        //     type: Boolean,
+        // },
+        // roofRails: {
+        //     type: Boolean,
+        // }
         frontParkingSensor: {
             type: Boolean,
             default: false
@@ -164,22 +158,41 @@ const Form = new mongoose.Schema({
         reversingCamera: {
             type: Boolean,
             default: false
-        }
-    },
-    interior: {
-        electricWindows: {
-            type: Boolean,
-            default: false
-        },
-        seatsInFullLeather: {
-            type: Boolean,
-            default: false
         },
         darkWindowsBehind: {
             type: Boolean,
             default: false
         },
-        sunroofGlass: {
+
+
+
+    },
+    driverAssistance: {
+        // highBeamAssistant: {
+        //     type: Boolean,
+        //     default: false
+        // },
+      
+    },
+    interior: {
+        // electricWindows: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // seatsInFullLeather: {
+        //     type: Boolean,
+        //     default: false
+        // },
+      
+        
+       
+        // sportsSeats: {
+        //     type: Boolean,
+        //     default: false
+        // }
+    },
+    comfort: {
+        airConditioning: {
             type: Boolean,
             default: false
         },
@@ -187,13 +200,7 @@ const Form = new mongoose.Schema({
             type: Boolean,
             default: false
         },
-        sportsSeats: {
-            type: Boolean,
-            default: false
-        }
-    },
-    comfort: {
-        airConditioning: {
+        antiSpin: {
             type: Boolean,
             default: false
         },
@@ -201,30 +208,34 @@ const Form = new mongoose.Schema({
             type: Boolean,
             default: false
         },
-        middleArms: {
-            type: Boolean,
-            default: false
-        },
+        // middleArms: {
+        //     type: Boolean,
+        //     default: false
+        // },
         keylessStart: {
             type: Boolean,
             default: false
         },
-        trunkCover: {
+        sunroofGlass: {
             type: Boolean,
             default: false
         },
+        // trunkCover: {
+        //     type: Boolean,
+        //     default: false
+        // },
         electricalSeatWithMemory: {
             type: Boolean,
             default: false
         },
-        cabinHeater: {
-            type: Boolean,
-            default: false
-        },
-        engineHeater: {
-            type: Boolean,
-            default: false
-        },
+        // cabinHeater: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // engineHeater: {
+        //     type: Boolean,
+        //     default: false
+        // },
         heatedSeats: {
             type: Boolean,
             default: false
@@ -241,28 +252,28 @@ const Form = new mongoose.Schema({
             type: Boolean,
             default: false
         },
-        levelRegulation: {
-            type: Boolean,
-            default: false
-        }
+        // levelRegulation: {
+        //     type: Boolean,
+        //     default: false
+        // }
     },
     mediaEntertainment: {
         auxInput: {
             type: Boolean,
             default: false
         },
-        handsfreeScheme: {
-            type: Boolean,
-            default: false
-        },
-        multifunctionSteeringWheel: {
-            type: Boolean,
-            default: false
-        },
-        radioDABPlus: {
-            type: Boolean,
-            default: false
-        },
+        // handsfreeScheme: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // multifunctionSteeringWheel: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // radioDABPlus: {
+        //     type: Boolean,
+        //     default: false
+        // },
         bluetooth: {
             type: Boolean,
             default: false
@@ -283,70 +294,67 @@ const Form = new mongoose.Schema({
             type: Boolean,
             default: false
         },
-        cassettePlayer: {
-            type: Boolean,
-            default: false
-        },
-        originalPhone: {
-            type: Boolean,
-            default: false
-        },
+        // cassettePlayer: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // originalPhone: {
+        //     type: Boolean,
+        //     default: false
+        // },
         tvScreenInTheBackSeat: {
             type: Boolean,
             default: false
         }
     },
     engineDrive: {
-        antiScratch: {
-            type: Boolean,
-            default: false
-        },
-        diffLock: {
-            type: Boolean,
-            default: false
-        },
-        antiSpin: {
-            type: Boolean,
-            default: false
-        },
-        tripComputer: {
-            type: Boolean,
-            default: false
-        },
-        dieselParticulateFilter: {
-            type: Boolean,
-            default: false
-        },
-        powerSteering: {
-            type: Boolean,
-            default: false
-        }
+        // antiScratch: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // diffLock: {
+        //     type: Boolean,
+        //     default: false
+        // },
+       
+        // tripComputer: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // dieselParticulateFilter: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // powerSteering: {
+        //     type: Boolean,
+        //     default: false
+        // }
     },
     security: {
         absBrakes: {
             type: Boolean,
             default: false
         },
-        retrievalSystem: {
-            type: Boolean,
-            default: false
-        },
-        sideAirbags: {
-            type: Boolean,
-            default: false
-        },
-        frontAirbag: {
-            type: Boolean,
-            default: false
-        },
-        isofix: {
-            type: Boolean,
-            default: false
-        },
-        immobilizer: {
-            type: Boolean,
-            default: false
-        },
+        // retrievalSystem: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // sideAirbags: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // frontAirbag: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // isofix: {
+        //     type: Boolean,
+        //     default: false
+        // },
+        // immobilizer: {
+        //     type: Boolean,
+        //     default: false
+        // },
         alarm: {
             type: Boolean,
             default: false
@@ -357,11 +365,8 @@ const Form = new mongoose.Schema({
         }
     },    
     kilometrat: {
-        type: String,
-        enum: ["0", "0-49,000", "50,000-99,000", "100,000-149,000",
-        "150,000-199,000", "200,000-249,000", "250,000-299,000",
-        "300,000-349,000", "350,000-399,000", "400,000-449,000",
-        "450,000-500,000", "+500,000"],
+        type: Number,
+        
         //required: [true, 'required']
     },
 

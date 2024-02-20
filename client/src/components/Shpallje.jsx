@@ -5,6 +5,7 @@ import { Link,useParams } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "./style/Shpallje.css"
 
 
 const Shpallje = () => {
@@ -52,14 +53,14 @@ const Shpallje = () => {
   
 
 
-  <div style={{ width: '70%' }}>
+  <div className='announcement' >
     <h2>Announcement</h2>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px' }}>
+    <div className='announcements' >
       {posts.map(post => (
-        <div key={post.id} style={{ backgroundColor: '#f9f9f9', padding: '20px', borderRadius: '5px' }}>
+        <div className='announcement-item' key={post.id} >
           <div>
             <Link to={`/shpallje/${post._id}`}>
-              <h4 style={{ marginTop: '0' }}>{post.destinacioni}</h4>
+              <h4 >{post.destinacioni}</h4>
             </Link>
             <p>Description: {post.pershkrimi}</p>
             <p>Daily Price: {post.cmimiDitor}</p>

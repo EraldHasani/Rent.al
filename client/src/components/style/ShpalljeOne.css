@@ -1,0 +1,66 @@
+.announcement {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+  }
+  
+  .announcement h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .announcement-info {
+    margin-bottom: 20px;
+  }
+  
+  .announcement-info p {
+    margin-bottom: 5px;
+  }
+  
+  .announcement-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .participate-button,
+  .make-available-button,
+  .make-occupied-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .make-available-button,
+  .make-occupied-button {
+    background-color: #f44336;
+  }
+  
+  .announcement-actions button:hover {
+    opacity: 0.8;
+  }
+  
+  .participants-list {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .participant {
+    margin-bottom: 5px;
+  }
+  
+  .participant:last-child {
+    margin-bottom: 0;
+  }
+  

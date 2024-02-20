@@ -38,84 +38,89 @@ const UpdateProduct = (props) => {
   const [interiorColor, setInteriorColor] = useState("");
   const [exterior, setExterior] = useState({
     "electricalMirrors": false,
-    "hangerFixedHook": false,
-    "ledLights": false,
-    "metallicPaint": false,
-    "lightweightRimWinter": false,
-
-
-    "winterWheels": false,
-    "roofRails": false,
-    "allSeasonTires ": false,
-    "laserLight": false,
-    "cargoHolders": false,
-
-    "lightweightRimSummer": false,
-    "summerWheels": false,
-    "xenonLights": false,
-    "trailerAttachment": false,
-  });
-
-  const [driverAssistance, setDriverAssistance] = useState({
-    "highBeamAssistant": false,
     "frontParkingSensor": false,
     "lightSensor": false,
     "rainSensor": false,
     "rearParkingSensor": false,
     "reversingCamera": false,
+    "darkWindowsBehind": false,
+    // "hangerFixedHook": false,
+    // "ledLights": false,
+    // "metallicPaint": false,
+    // "lightweightRimWinter": false,
+
+
+    // "winterWheels": false,
+    // "roofRails": false,
+    // "allSeasonTires ": false,
+    // "laserLight": false,
+    // "cargoHolders": false,
+
+    // "lightweightRimSummer": false,
+    // "summerWheels": false,
+    // "xenonLights": false,
+    // "trailerAttachment": false,
+  });
+
+  const [driverAssistance, setDriverAssistance] = useState({
+    // "highBeamAssistant": false,
+    
   });
   const [interior, setInterior] = useState({
-    "electricWindows": false,
-    "seatsInFullLeather": false,
-    "darkWindowsBehind": false,
-    "sunroofGlass": false,
-    "seatsInPartialLeather": false,
-    "sportsSeats": false,
+    // "electricWindows": false,
+    // "seatsInFullLeather": false,
+   
+    
+    
+    // "sportsSeats": false,
   });
   const [comfort, setComfort] = useState({
     "airConditioning": false,
     "cruiseControlAdaptive": false,
-    "middleArms": false,
+    "seatsInPartialLeather": false,
+    "sunroofGlass": false,
+    // "middleArms": false,
     "keylessStart": false,
-    "trunkCover": false,
+    // "trunkCover": false,
     "electricalSeatWithMemory": false,
-    "cabinHeater": false,
-    "engineHeater": false,
+    // "cabinHeater": false,
+    // "engineHeater": false,
     "heatedSeats": false,
     "cruiseControl": false,
     "electricSeatWithMemory": false,
     "airSuspension": false,
-    "levelRegulation": false,
+    "antiSpin": false,
+    // "levelRegulation": false,
   });
   const [mediaEntertainment, setMediaEntertainment] = useState({
     "auxInput": false,
-    "handsfreeScheme": false,
-    "multifunctionSteeringWheel": false,
-    "radioDABPlus": false,
+    // "handsfreeScheme": false,
+    // "multifunctionSteeringWheel": false,
+    // "radioDABPlus": false,
     "bluetooth": false,
     "headUpDisplay": false,
     "navigationSystem": false,
     "radioFM": false,
     "cdPlayer": false,
-    "cassettePlayer": false,
-    "originalPhone": false,
-    "tvScreenInTheBackSeat": false,
+    // "cassettePlayer": false,
+    // "originalPhone": false,
+    // "tvScreenInTheBackSeat": false,
   });
   const [engineDrive, setEngineDrive] = useState({
-    "antiScratch": false,
-    "diffLock": false,
-    "antiSpin": false,
-    "tripComputer": false,
-    "dieselParticulateFilter": false,
-    "powerSteering": false,
+    // "antiScratch": false,
+    // "diffLock": false,
+    
+    // "tripComputer": false,
+    // "dieselParticulateFilter": false,
+    // "powerSteering": false,
   });
   const [security, setSecurity] = useState({
     "absBrakes": false,
-    "retrievalSystem": false,
-    "sideAirbags": false,
-    "frontAirbag": false,
-    "isofix": false,
-    "immobilizer": false,
+    // "retrievalSystem": false,
+    // "sideAirbags": false,
+    // "frontAirbag": false,
+    // "isofix": false,
+    // "immobilizer": false,
     "alarm": false,
     "centralLocking": false,
   });
@@ -276,83 +281,87 @@ const UpdateProduct = (props) => {
       setInteriorColor("");
       setExterior({
         "electricalMirrors": false,
-    "hangerFixedHook": false,
-    "ledLights": false,
-    "metallicPaint": false,
-    "lightweightRimWinter": false,
-
-
-    "winterWheels": false,
-    "roofRails": false,
-    "allSeasonTires ": false,
-    "laserLight": false,
-    "cargoHolders": false,
-
-    "lightweightRimSummer": false,
-    "summerWheels": false,
-    "xenonLights": false,
-    "trailerAttachment": false,
-      });
-      setDriverAssistance({
-        "highBeamAssistant": false,
-    "frontParkingSensor": false,
+        "darkWindowsBehind": false,
+        "frontParkingSensor": false,
     "lightSensor": false,
     "rainSensor": false,
     "rearParkingSensor": false,
     "reversingCamera": false,
+    // "hangerFixedHook": false,
+    // "ledLights": false,
+    // "metallicPaint": false,
+    // "lightweightRimWinter": false,
+
+
+    // "winterWheels": false,
+    // "roofRails": false,
+    // "allSeasonTires ": false,
+    // "laserLight": false,
+    // "cargoHolders": false,
+
+    // "lightweightRimSummer": false,
+    // "summerWheels": false,
+    // "xenonLights": false,
+    // "trailerAttachment": false,
+      });
+      setDriverAssistance({
+        // "highBeamAssistant": false,
+    
       });
       setInterior({
-        "electricWindows": false,
-    "seatsInFullLeather": false,
-    "darkWindowsBehind": false,
-    "sunroofGlass": false,
-    "seatsInPartialLeather": false,
-    "sportsSeats": false,
+        // "electricWindows": false,
+    // "seatsInFullLeather": false,
+    
+    
+    // "sportsSeats": false,
       });
       setComfort({
         "airConditioning": false,
         "cruiseControlAdaptive": false,
-        "middleArms": false,
+        // "middleArms": false,
         "keylessStart": false,
-        "trunkCover": false,
+        // "trunkCover": false,
         "electricalSeatWithMemory": false,
-        "cabinHeater": false,
-        "engineHeater": false,
+        // "cabinHeater": false,
+        // "engineHeater": false,
         "heatedSeats": false,
         "cruiseControl": false,
         "electricSeatWithMemory": false,
         "airSuspension": false,
-        "levelRegulation": false,
+        "antiSpin": false,
+        "sunroofGlass": false,
+     "seatsInPartialLeather": false,
+        // "levelRegulation": false,
       });
       setMediaEntertainment({
         "auxInput": false,
-    "handsfreeScheme": false,
-    "multifunctionSteeringWheel": false,
-    "radioDABPlus": false,
+    // "handsfreeScheme": false,
+    // "multifunctionSteeringWheel": false,
+    // "radioDABPlus": false,
     "bluetooth": false,
     "headUpDisplay": false,
     "navigationSystem": false,
     "radioFM": false,
     "cdPlayer": false,
-    "cassettePlayer": false,
-    "originalPhone": false,
+    // "cassettePlayer": false,
+    // "originalPhone": false,
     "tvScreenInTheBackSeat": false,
       });
       setEngineDrive({
-        "antiScratch": false,
-    "diffLock": false,
-    "antiSpin": false,
-    "tripComputer": false,
-    "dieselParticulateFilter": false,
-    "powerSteering": false,
+    //     "antiScratch": false,
+    // "diffLock": false,
+    
+    // "tripComputer": false,
+    // "dieselParticulateFilter": false,
+    // "powerSteering": false,
   });
       setSecurity({
         "absBrakes": false,
-        "retrievalSystem": false,
-        "sideAirbags": false,
-        "frontAirbag": false,
-        "isofix": false,
-        "immobilizer": false,
+        // "retrievalSystem": false,
+        // "sideAirbags": false,
+        // "frontAirbag": false,
+        // "isofix": false,
+        // "immobilizer": false,
         "alarm": false,
         "centralLocking": false,
       }); 
@@ -960,7 +969,7 @@ const UpdateProduct = (props) => {
           
               </div>
 
-                      <div className="Equipment">
+                      {/* <div className="Equipment">
 
                      
                 <div>
@@ -1182,10 +1191,7 @@ const UpdateProduct = (props) => {
                      
                       </div>
                       <div className="col-sm" style={{textAlign:"left", margin:"4px"}}>
-                      {/* <div>
-                      <input className="m-2" type="checkbox" name="Electrical seat with memory" checked={comfort["Electrical seat with memory"]} onChange={handleCheckboxChange} />
-                      <label htmlFor="">Electric seat with memory</label>
-                      </div> */}
+                      
                        <div>
                       <input className="m-2" id="trunkCover" type="checkbox" name="trunkCover" checked={comfort["trunkCover"]} onChange={handleCheckboxChange3} />
                       <label htmlFor="trunkCover">Trunk cover</label>
@@ -1395,26 +1401,13 @@ const UpdateProduct = (props) => {
                      
 
 
-                      </div>
+                      </div> */}
 
 
                       <div>
                         <label htmlFor="">Kilometers</label>
-                        <select type="number" className="form-control" id="kilometers" value={kilometrat} onChange={(e) => setKilometrat(e.target.value)} >
-                          <option value="" disabled> Kilometers</option>
-                          <option value="0">0 km</option>
-                          <option value="0-49,000">0 - 49 000 km</option>
-                          <option value="50,000-99,000">50,000 km - 99,000 km</option>
-                          <option value="100,000-149,000">100,000 km-149,000 km</option>
-                          <option value="150,000-199,000">150,000 km-199,000 km</option>
-                          <option value="200,000-249,000">200,000 km-249,000 km </option>
-                          <option value="250,000-299,000">250,000 km-299,000 km</option>
-                          <option value="300,000-349,000">300,000 km-349,000 km</option>
-                          <option value="350,000-399,000">350,000 km-399,000 km</option>
-                          <option value="400,000-449,000">400,000 km-449,000 km</option>
-                          <option value="450,000-500,000">450,000 km-500,000 km</option>
-                          <option value="+500,000">+500,000 km</option>
-                        </select>
+                        <input type="number" className="form-control" id="kilometers" value={kilometrat} onChange={(e) => setKilometrat(e.target.value)}/ >
+                         
                       </div>
                       <div>
                         <label htmlFor="carDamage">Car Damage</label>
@@ -1507,6 +1500,192 @@ const UpdateProduct = (props) => {
                           <label htmlFor="phone">Phone Number</label>
                           <input type="number" className="form-control" id="phone" value={number} onChange={(e)=>setNumber(e.target.value)} />
                           </div>
+
+                          <div className="Equipment">
+
+
+<div>
+  <h1 style={{ marginTop: "30px", marginBottom: "30px" }} >Equipment</h1>
+
+  
+                <div className="d-flex justify-content-flex-start border-bottom">
+                   <p style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }}>Comfort (optional)</p>
+                  <div style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }}>
+                    <input className="m-2" id="selectallComfort" type="checkbox" name="selectallComfort" checked={comfort["selectAllComfortCheckbox"]} onChange={handleSelectAllComfort} />
+                    <label htmlFor="selectallComfort">Select all</label>
+                  </div> 
+                </div>
+                
+                  
+                <div className="checkbox-lineup">
+
+  <div>
+    <input className="m-2" id="airConditioning" type="checkbox" name="airConditioning" checked={comfort["airConditioning"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="airConditioning">Air Conditioning</label>
+  </div>
+  <div>
+    <input className="m-2" id="cruiseControlAdaptive" type="checkbox" name="cruiseControlAdaptive" checked={comfort["cruiseControlAdaptive"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="cruiseControlAdaptive">Cruise Control </label>
+  </div>
+  <div>
+    <input className="m-2" id="keylessStart" type="checkbox" name="keylessStart" checked={comfort["keylessStart"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="keylessStart">Keyless start</label>
+  </div>
+  <div>
+    <input className="m-2" id="heatedSeats" type="checkbox" name="heatedSeats" checked={comfort["heatedSeats"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="heatedSeats">Heated Seats</label>
+  </div>
+  </div>
+
+  <div className="checkbox-lineup">
+  <div>
+    <input className="m-2" id="sunroofGlass" type="checkbox" name="sunroofGlass" checked={comfort["sunroofGlass"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="sunroofGlass">Sunroof/glass</label>
+  </div>
+  <div>
+    <input className="m-2" id="seatsInPartialLeather" type="checkbox" name="seatsInPartialLeather" checked={comfort["seatsInPartialLeather"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="seatsInPartialLeather">Leather Seats</label>
+  </div>
+  <div>
+    <input className="m-2" id="electricSeatWithMemory" type="checkbox" name="electricSeatWithMemory" checked={comfort["electricSeatWithMemory"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="electricSeatWithMemory">Electric Seats with Memory</label>
+  </div>
+  <div>
+    <input className="m-2" id="antiSpin" type="checkbox" name="antiSpin" checked={comfort["antiSpin"]} onChange={handleCheckboxChange3} />
+    <label htmlFor="antiSpin">Air suspension</label>
+  </div>
+  </div>
+  
+
+  
+                  <div className="d-flex justify-content-flex-start border-bottom">
+                     <p style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }}>Exterior (optional)</p>
+                    <div style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }} >
+                      <input className="m-2" type="checkbox" id="selectallExterior" name="selectallExterior" checked={exterior["selectAllExteriorCheckbox"]} onChange={handleSelectAllExterior} />
+                      <label htmlFor="selectallExterior">Select all</label>
+                    </div>
+                  </div>
+
+                 
+<div className="checkbox-lineup">
+
+
+  <div>
+    <input className="m-2" id="lightSensor" type="checkbox" name="lightSensor" checked={exterior["lightSensor"]} onChange={handleCheckboxChange1} />
+    <label htmlFor="lightSensor">Light Sensor</label>
+  </div>
+  <div>
+    <input className="m-2" id="rainSensor" type="checkbox" name="rainSensor" checked={exterior["rainSensor"]} onChange={handleCheckboxChange1} />
+    <label htmlFor="rainSensor">Rain Sensor</label>
+  </div>
+  </div>
+  <div className="checkbox-lineup">
+  <div>
+    <input className="m-2" id="rearParkingSensor" type="checkbox" name="rearParkingSensor" checked={exterior["rearParkingSensor"]} onChange={handleCheckboxChange1} />
+    <label htmlFor="rearParkingSensor">Parking Sensors</label>
+  </div>
+  <div>
+    <input className="m-2" id="reversingCamera" type="checkbox" name="reversingCamera" checked={exterior["reversingCamera"]} onChange={handleCheckboxChange1} />
+    <label htmlFor="reversingCamera">Reversing Camera</label>
+  </div>
+  <div>
+    <input className="m-2" id="darkWindowsBehind" type="checkbox" name="darkWindowsBehind" checked={exterior["darkWindowsBehind"]} onChange={handleCheckboxChange1} />
+    <label htmlFor="darkWindowsBehind">Tinted Windows</label>
+  </div>
+  </div>
+  
+
+
+ 
+                <div className="d-flex justify-content-flex-start border-bottom">
+                   <p style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }}>Media & Entertainment (optional)</p>
+                  <div style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }}>
+                    <input className="m-2" id="selectallMediaEntertainment" type="checkbox" name="selectallMediaEntertainment" checked={mediaEntertainment["selectAllMediaEntertainmentCheckbox"]} onChange={handleSelectAllMediaEntertainment} />
+                    <label htmlFor="selectallMediaEntertainment">Select all</label>
+                  </div>
+                </div>
+                
+                  
+                <div className="checkbox-lineup">
+  <div>
+    <input className="m-2" id="bluetooth" type="checkbox" name="bluetooth" checked={mediaEntertainment["bluetooth"]} onChange={handleCheckboxChange4} />
+    <label htmlFor="bluetooth">Bluetooth</label>
+  </div>
+  <div>
+    <input className="m-2" id="headUpDisplay" type="checkbox" name="headUpDisplay" checked={mediaEntertainment["headUpDisplay"]} onChange={handleCheckboxChange4} />
+    <label htmlFor="headUpDisplay">Head up display</label>
+  </div>
+  <div>
+    <input className="m-2" id="navigationSystem" type="checkbox" name="navigationSystem" checked={mediaEntertainment["navigationSystem"]} onChange={handleCheckboxChange4} />
+    <label htmlFor="navigationSystem">Navigation system</label>
+  </div>
+  </div>
+  <div className="checkbox-lineup">
+  <div>
+    <input className="m-2" id="radioFM" type="checkbox" name="radioFM" checked={mediaEntertainment["radioFM"]} onChange={handleCheckboxChange4} />
+    <label htmlFor="radioFM">Radio FM</label>
+  </div>
+  
+  <div>
+    <input className="m-2" id="cdPlayer" type="checkbox" name="cdPlayer" checked={mediaEntertainment["cdPlayer"]} onChange={handleCheckboxChange4} />
+    <label htmlFor="cdPlayer">CD player</label>
+  </div>
+  <div>
+    <input className="m-2" id="auxInput" type="checkbox" name="auxInput" checked={mediaEntertainment["auxInput"]} onChange={handleCheckboxChange4} />
+    <label htmlFor="auxInput">AUX input</label>
+  </div>
+
+  <div>
+    <input className="m-2" id="tvScreenInTheBackSeat" type="checkbox" name="tvScreenInTheBackSeat" checked={mediaEntertainment["tvScreenInTheBackSeat"]} onChange={handleCheckboxChange4} />
+    <label className="small" htmlFor="tvScreenInTheBackSeat">TV screen in the back seat</label>
+  </div>
+  </div>
+  </div>
+
+
+
+
+  
+                 <div className="d-flex justify-content-flex-start border-bottom">
+                  <p style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }}>Security (optional)</p>
+
+                  <div style={{ textAlign: "left", marginTop: "30px", marginBottom: "30px" }}>
+                    <input className="m-2" id="selectallSecurity" type="checkbox" name="selectallSecurity" checked={security["selectAllSecurityCheckbox"]} onChange={handleSelectAllSecurity} />
+                    <label htmlFor="selectallSecurity">Select all</label>
+                  </div>
+
+
+                </div> 
+                
+                  
+
+                <div className="checkbox-lineup">
+  <div>
+    <input className="m-2" id="absBrakes" type="checkbox" name="absBrakes" checked={security["absBrakes"]} onChange={handleCheckboxChange6} />
+    <label htmlFor="absBrakes">ABS System</label>
+  </div>
+  <div>
+    <input className="m-2" id="centralLocking" type="checkbox" name="centralLocking" checked={security["centralLocking"]} onChange={handleCheckboxChange6} />
+    <label htmlFor="centralLocking">Central Locking</label>
+  </div>
+  <div>
+    <input className="m-2" id="alarm" type="checkbox" name="alarm" checked={security["alarm"]} onChange={handleCheckboxChange6} />
+    <label htmlFor="alarm">Alarm</label>
+  </div>
+  </div>
+ 
+  
+
+
+
+
+
+
+</div>
+
+
+
+</div>
                           
 
 
@@ -1514,7 +1693,7 @@ const UpdateProduct = (props) => {
 
                        </div>
 
-          </div>
+          
       </form>
       <div>
     <Footer />
