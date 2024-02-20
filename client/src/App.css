@@ -1192,3 +1192,36 @@ a:focus {
 .border{ 
   border: 1px solid #dee2e6! important;
 }
+
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.textinput {
+  font-size: smaller;
+  color: black;
+  font-weight: 700;
+  position: relative;
+  top: 1.9rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #ffffff;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #171717 solid;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
