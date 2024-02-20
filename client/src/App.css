@@ -850,6 +850,41 @@ a:focus {
 }
 
 
+.card {
+  border: none;
+  background: rgba(255, 254, 254, 0.883);
+  transition: .5s;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
 
 
+}
+.card:hover {
+  background: var(--light);
+  transition: .5s;
+}
+
+
+.containe {
+  background:white;
+  transition: .5s;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+
+}
+.cardReservation {
+  border: none;
+  width: 50%;
+  background: rgba(255, 254, 254, 0.883);
+  transition: .5s;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

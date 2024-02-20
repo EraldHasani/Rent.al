@@ -64,35 +64,40 @@ const [updated, setUpdated] = useState(false);
 
   return (
     
-      <div>
+      <div >
       <Navbar />
+<div className="containe" style={{margin:"100px",width:"85%"}}>
+
 
 
   {
+    
     form && form.map((item, index) => {
       return (
-        <div className="mt-5" key={index}>
-        
-          <div className="border p-4">
+        <div className="cardReservation "  style={{width:"75%",margin:"40px"}} key={index}>
+        <div className="">
+        <div className="border p-4 d-flex justify-content-evenly">
            <p><Link to={`/form/${item.formId}`} className=" text-center">
               {item.targa || "Placeholder Name"}
             </Link></p> 
             <p  className="text-center">
-              Cmimi {item.cmimiTotal || null}
+              Cmimi  <br />{item.cmimiTotal || null}
             </p>
            
             <p className="text-center">
-              Data e Rezervimit {item.dataRezervimit || null}
+            Data e Rezervimit <br /> {item.dataRezervimit ? new Date(item.dataRezervimit).toLocaleDateString() : null}
             </p>
             <p className="text-center">
-              Ditet {item.ditet || null}
+              Ditet <br /> {item.ditet || null}
             </p>
             <p className="text-center">
-              Cmimi Ditor {item.cmimiDitor || null}
+              Cmimi Ditor  <br />{item.cmimiDitor || null}
             </p>
            
            
           </div>
+        </div>
+       
          
           <button
                   data-bs-toggle="modal"
@@ -175,7 +180,7 @@ const [updated, setUpdated] = useState(false);
 
     })
   }
-
+</div>
   </div>
 
     

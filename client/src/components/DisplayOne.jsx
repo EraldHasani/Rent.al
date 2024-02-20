@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import '@fortawesome/fontawesome-free/css/all.css';
+import { TbManualGearbox } from "react-icons/tb";
 
 const DisplayOne = () => {
   const { id } = useParams();
@@ -276,7 +277,7 @@ const handleEZene = () => {
               {form ? form.kilometrat : null} km</p>
 
             <p>
-            <i className="fa fa-cogs text mr-1 m-2"></i>{form ? form.gearbox : null} </p>
+          <TbManualGearbox /> {form ? form.gearbox : null} </p>
 
             <p><i class="fa-solid fa-gas-pump m-2"></i>
 

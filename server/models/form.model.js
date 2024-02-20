@@ -60,7 +60,7 @@ const Form = new mongoose.Schema({
     co2EmissionsIgKm: Number,
     gearbox: {
         type: String,
-        enum: ["automatike", "manuale", "Semi-automatic"],
+        enum: ["automatic", "manual", "Semi-automatic"],
         //required: [true, 'required']
     },
     gearboxDesignation: String,

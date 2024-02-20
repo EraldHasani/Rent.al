@@ -35,7 +35,7 @@ const MyProfile = (props) => {
             <p style={styles.info}>{firstName} {lastName}</p>
             <div style={styles.buttonContainer}>
                 <button style={styles.button} onClick={navigateToUserInfo}>My Account</button>
-                <button style={styles.button} onClick={() => navigate('/my-listings')}>Favorites</button>
+                <button style={styles.button} onClick={() => navigate('/favorites')}>Favorites</button>
                 <button style={styles.smallButton} onClick={() => navigate(-1)}>Go Back</button>
             </div>
             <div style={styles.listingsContainer}>

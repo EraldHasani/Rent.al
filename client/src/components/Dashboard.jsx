@@ -402,7 +402,7 @@ const Dashboard = () => {
 
                 <div className="col-lg-4 col-md-6 mb-2">
                     <div className="rent-item mb-4 d-flex flex-column justify-content-between align-items-center" style={{height:"450px"}}>
-                        <img className="img-fluid mb-4" width="300px" height="300px"  src={post.image} alt="Car"/>
+                        <img className="img-fluid mb-4" width="300px" height="300px"  src={post.image} alt="Car" style={{width:"80%", height:"50%"}}/>
                         <h4 className="text-uppercase mb-4"> 
                         <Link to={`/form/${post._id}`}>
                                 {post.brandi}
