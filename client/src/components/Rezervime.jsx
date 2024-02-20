@@ -76,7 +76,7 @@ const [updated, setUpdated] = useState(false);
       return (
         <div className="cardReservation "  style={{width:"90%",margin:"40px"}} key={index}>
         <div className="">
-        <div className=" p-4 m-2 d-flex justify-content-evenly">
+        <div className=" p-4 m-2  d-flex justify-content-evenly align-items-center">
         
            <p><Link to={`/form/${item.formId}`} className=" text-center">
            <span className="fw-bolder fs-2" >     {item.targa || "Placeholder Name"} </span>
@@ -163,7 +163,7 @@ const [updated, setUpdated] = useState(false);
             <input type="hidden" name="cmimiDitor" value={item.cmimiDitor} />
           
 
-             <textarea className="form-control mb-3" cols="30" rows="3" value={pershkrimi}
+             <textarea className="form-control mb-3" cols="30" rows="3" placeholder="Destination description" value={pershkrimi}
                   onChange={(e) => setPershkrimi(e.target.value)} >
 
                   </textarea>
