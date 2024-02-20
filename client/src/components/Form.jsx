@@ -411,33 +411,41 @@ const Form = (props) => {
       >
         <div className="containe">
           <div className="col-md-6 " style={{ marginLeft: "300px" }}>
-            <div className="form-group">
-              <label htmlFor="targa">Number Plate</label>
+
+            <div className="coolinput">
+              <label className="textinput" htmlFor="targa">Number Plate</label>
               <input
                 type="text"
-                className="form-control"
+                className="input"
                 id="targa"
                 value={targa}
                 onChange={(e) => setTarga(e.target.value)}
               />
             </div>
-            <div className="form-group ">
-              <label htmlFor="shasia " className="mr-2">
+            { targa.length>0 && targa.length < 5 ? (
+              <p style={{ color: "red" }}>Please fill in this field</p>
+            ) : null}
+
+           <div className="coolinput">
+              <label className="textinput" htmlFor="shasia">
                 Chassis Nr.
               </label>
               <input
                 type="text"
-                className="form-control"
+                className="input"
                 id="shasia"
                 value={shasia}
                 onChange={(e) => setShasia(e.target.value)}
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="vitiProdhimit">Year Model</label>
+            {shasia.length>0 && shasia.length < 5 ? (
+              <p style={{ color: "red" }}>Please fill in this field</p>
+            ) : null}
+             <div className="coolinput">
+              <label className="textinput" htmlFor="vitiProdhimit">Year Model</label>
               <select
                 type="text"
-                className="form-control"
+                className="input"
                 id="vitiProdhimit"
                 value={vitiProdhimit}
                 onChange={(e) => setVitiProdhimit(e.target.value)}
@@ -464,15 +472,17 @@ const Form = (props) => {
                 <option value="2008">2008</option>
               </select>
             </div>
-            <div className="form-group">
-              <label htmlFor="brandi">Brand</label>
+
+             <div className="coolinput">
+              <label  className="textinput"  htmlFor="brandi">Brand</label>
               <select
                 id="selectedBrand"
+                type="text"
+                className="input"
                 value={selectedBrand}
                 onChange={(e) => setSelectedBrand(e.target.value)}
-                className="form-control"
               >
-                <option value="">Brand Model</option>
+                <option disabled selected value="">Select Brand</option>
                 <option value="BMW">BMW</option>
                 <option value="Mercedes-Benz">Mercedes-Benz</option>
                 <option value="Audi">Audi</option>
@@ -531,17 +541,22 @@ const Form = (props) => {
                       <option value="KMT">KMT</option> */}
               </select>
 
-              <div>
-                {selectedBrand === "" ? null : (
-                  <label htmlFor="Model">Brand Model</label>
-                )}
-                {selectedBrand === "Audi" && (
-                  <select
-                    id="selectedModel"
-                    value={selectedModel}
-                    onChange={(e) => setSelectedModel(e.target.value)}
-                    className="form-control "
-                  >
+           
+
+           <div className="coolinput">
+            {selectedBrand !== "" && (
+              <label htmlFor="Model" className="textinput">
+                Brand Model
+              </label>
+            )}
+            {selectedBrand === "Audi" && (
+              <select
+              type="text"
+                id="selectedModel"
+                value={selectedModel}
+                onChange={(e) => setSelectedModel(e.target.value)}
+                className="input"
+              >
                     <option value="">Select an Audi Model</option>
                     <option value="A3">A3</option>
                     <option value="A4">A4</option>
@@ -574,8 +589,8 @@ const Form = (props) => {
                     id="selectedModel"
                     value={selectedModel}
                     onChange={(e) => setSelectedModel(e.target.value)}
-                    className="form-control "
-                  >
+                    type="text"
+                    className="input"                  >
                     <option value="">Brand Model</option>
                     <option value="X5">X5</option>
                     <option value="X3">X3</option>
@@ -591,8 +606,8 @@ const Form = (props) => {
                     id="selectedModel"
                     value={selectedModel}
                     onChange={(e) => setSelectedModel(e.target.value)}
-                    className="form-control "
-                  >
+                    type="text"
+                    className="input"                  >
                     <option value="">Brand Model</option>
                     <option value="A-Class">A-Class</option>
                     <option value="C-Class">C-Class</option>
@@ -617,8 +632,8 @@ const Form = (props) => {
                     id="selectedModel"
                     value={selectedModel}
                     onChange={(e) => setSelectedModel(e.target.value)}
-                    className="form-control"
-                  >
+                    type="text"
+                    className="input"                  >
                     <option value="">Brand Model</option>
                     <option value="Model S">Model S</option>
                     <option value="Model 3">Model 3</option>
@@ -628,10 +643,11 @@ const Form = (props) => {
                 )}
               </div>
 
-              <div>
-                <label htmlFor="qyteti">City</label>
+              <div className="coolinput">
+                <label  className="textinput" htmlFor="qyteti">City</label>
                 <select
-                  className="form-control "
+                  type="text"
+                  className="input"  
                   name=""
                   id=""
                   value={qyteti}
@@ -696,10 +712,14 @@ const Form = (props) => {
                 </select>
               </div>
 
-              <div>
-                <label htmlFor="fuel">Fuel Type</label>
+            
+
+
+              <div className="coolinput">
+                <label className="textinput"  htmlFor="fuel">Fuel Type</label>
                 <select
-                  className="form-control "
+                  type="text"
+                  className="input"               
                   name=""
                   id=""
                   value={selectedFuel}
@@ -720,48 +740,51 @@ const Form = (props) => {
                   <option value="Hydrogen">Hydrogen</option>
                 </select>
               </div>
-              <div>
-                <label htmlFor="cylinderVolumeInLiters">
+             
+              <div className="coolinput">
+                <label className="textinput" htmlFor="cylinderVolumeInLiters">
                   Engine displacement (optional)
                 </label>
                 <input
                   type="number"
-                  className="form-control"
+                  className="input"  
                   min="0"
                   id="cylinderVolumeInLiters"
                   value={cylinderVolumeInLiters}
                   onChange={(e) => setCylinderVolumeInLiters(e.target.value)}
                 />
               </div>
-              <div>
-                <label htmlFor="powerInHp">Power in HP (optional)</label>
+
+                <div className="coolinput">
+                <label className="textinput" htmlFor="powerInHp">Power in HP (optional)</label>
                 <input
-                  type="number"
-                  className="form-control"
+                   type="number"
+                   className="input"  
                   id="powerInHp"
                   min="0"
                   value={powerInHp}
                   onChange={(e) => setPowerInHp(e.target.value)}
                 />
               </div>
-              <div>
-                <label htmlFor="co2EmissionsIgKm">
+              <div className="coolinput">
+                <label className="textinput" htmlFor="co2EmissionsIgKm">
                   Emission Standard (optional)
                 </label>
                 <input
                   type="number"
-                  className="form-control"
+                  className="input"  
                   min="0"
                   id="co2EmissionsIgKm"
                   value={co2EmissionsIgKm}
                   onChange={(e) => setCo2EmissionsIgKm(e.target.value)}
                 />
               </div>
-              <div>
-                <label htmlFor="gearbox">Gearbox</label>
+              <div className="coolinput">
+                <label className="textinput" htmlFor="gearbox">Gearbox</label>
                 <select
-                  className="form-control"
-                  name=""
+                  className="input"  
+                  type="text"
+                    name=""
                   id=""
                   value={gearbox}
                   onChange={(e) => setGearbox(e.target.value)}
@@ -776,10 +799,11 @@ const Form = (props) => {
                 </select>
               </div>
 
-              <div>
-                <label htmlFor="wheelDrive">Wheel Drive System</label>
+              <div className="coolinput">
+                <label className="textinput" htmlFor="wheelDrive">Wheel Drive System</label>
                 <select
-                  className="form-control"
+                   className="input"  
+                   type="text"
                   name=""
                   id=""
                   value={wheelDrive}
@@ -794,10 +818,11 @@ const Form = (props) => {
                 </select>
               </div>
 
-              <div>
-                <label htmlFor="bodyType">Body Type</label>
+              <div className="coolinput">
+                <label className="textinput" htmlFor="bodyType">Body Type</label>
                 <select
-                  className="form-control"
+                    className="input"  
+                    type="text"
                   name=""
                   id=""
                   value={bodyType}
@@ -821,43 +846,46 @@ const Form = (props) => {
                   <option value="Other">Other</option>
                 </select>
               </div>
-              <div>
-                <label htmlFor="numberOfSeats">Number of Seats</label>
+
+              <div className="coolinput">
+                <label className="textinput" htmlFor="numberOfSeats">Number of Seats</label>
                 <input
                   type="number"
-                  className="form-control"
+                  className="input"  
                   id="numberOfSeats"
                   min="2"
                   value={numberOfSeats}
                   onChange={(e) => setNumberOfSeats(e.target.value)}
                 />
               </div>
-              <div>
-                <label htmlFor="numberOfDoors">Number of Doors</label>
+              <div className="coolinput">
+                <label className="textinput" htmlFor="numberOfDoors">Number of Doors</label>
                 <input
                   type="number"
-                  className="form-control"
+                  className="input" 
                   id="numberOfDoors"
                   min="2"
                   value={numberOfDoors}
                   onChange={(e) => setNumberOfDoors(e.target.value)}
                 />
               </div>
-              <div>
-                <label htmlFor="netWeightInKg">Weight in KG</label>
+
+              <div className="coolinput">
+                <label className="textinput"  htmlFor="netWeightInKg">Weight in KG</label>
                 <input
                   type="number"
-                  className="form-control"
-                  id="netWeightInKg"
+                  className="input"  
+                   id="netWeightInKg"
                   min="0"
                   value={netWeightInKg}
                   onChange={(e) => setNetWeightInKg(e.target.value)}
                 />
               </div>
-              <div>
-                <label htmlFor="">Color</label>
+              <div className="coolinput">
+                <label className="textinput"  htmlFor="">Color</label>
                 <select
-                  className="form-control"
+                  type="text"
+                  className="input"  
                   name=""
                   id=""
                   value={mainColor}
@@ -895,39 +923,40 @@ const Form = (props) => {
               </div> */}
             </div>
 
-            <div>
-              <label htmlFor="">Kilometers</label>
+            <div className="coolinput">
+                <label className="textinput"  htmlFor="">Kilometers</label>
               <input
                 type="number"
-                className="form-control"
+                className="input" 
                 id="kilometers"
                 min="0"
                 value={kilometrat}
                 onChange={(e) => setKilometrat(e.target.value)}
               />
             </div>
-            <div>
-              <label htmlFor="carDamage">Car Damage</label>
+            <div className="coolinput">
+                <label className="textinput" htmlFor="carDamage">Car Damage</label>
               <select
-                className="form-control"
+                type="text"
+                className="input" 
                 name=""
                 id=""
                 value={carDamage}
                 onChange={(e) => setCarDamage(e.target.value)}
               >
-                <option value=""> </option>
+                <option disabled selected value=""> Select Damage</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
               </select>
             </div>
             <div>
               {carDamage === "Yes" ? (
-                <div>
-                  <label htmlFor="damageDetails">Damage Description</label>
+                 <div className="coolinput">
+                 <label className="textinput"  htmlFor="damageDetails">Damage Description</label>
                   <input
                     type="textarea"
-                    className="form-control"
-                    id="damageDetails"
+                    className="input"             
+                     id="damageDetails"
                     value={damageDetails}
                     onChange={(e) => setDamageDetails(e.target.value)}
                   />
@@ -958,13 +987,13 @@ const Form = (props) => {
                 Upload Photos
               </button> */}
             </div>
-            <div>
-              <h1 className="m-4">Pictures and Description</h1>
-              <div>
-                <label htmlFor="image">Images</label>
+            <div >
+                 <h2 className="m-4" >Pictures and Description</h2>
+                 <div className="coolinput">
+                 <label className="textinput2" htmlFor="image">Images</label>
                 <input
                   type="file"
-                  className="form-control"
+                  className="input"             
                   onChange={(e) => setImage(e.target.files[0])}
                   placeholder="Please add one display image "
                 />
@@ -981,55 +1010,54 @@ const Form = (props) => {
 
                       </div>
                       </div> */}
-            <div>
-              <label htmlFor="description">Description</label>
+             <div className="coolinput">
+                 <label className="textinput"  htmlFor="description">Description</label>
               <textarea
                 type="textarea"
-                className="form-control"
+                className="input"             
                 id="description"
-                rows="10"
-                cols="100"
+                rows="3"
+                cols="10"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <label htmlFor="price">Daily Price </label>
-              <div style={{ display: "flex", alignItems: "center" }}>
+            <div className="coolinput" >
+            <label className="textinput" htmlFor="price">Daily Price (€) </label>
+              
                 <input
                   type="number"
-                  className="form-control"
+                  min="0"
+                  className="input"             
                   id="price"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                 />
-                <span style={{ marginLeft: "5px" }}>€</span>
-              </div>
+                <span ></span>
+              
             </div>
-            <div>
-              <h1 className="m-4">Contact Info</h1>
-              <label htmlFor="streetAddress"> Street address</label>
+            <div className="coolinput" >
+            
+              <h2 className="m-4">Contact Info</h2>
+
+            <label className="textinput" htmlFor="streetAddress"> Street address</label>
               <input
                 type="text"
-                className="form-control"
+                className="input"             
                 id="streetAddress"
                 value={streetAddress}
                 onChange={(e) => setStreetAddress(e.target.value)}
               />
             </div>
-            <div class="coolinput">
-    <label for="input" class="textinput">Name:</label>
-    <input type="text" placeholder="Write here..." name="input" className="input">
-      </input>
-</div>
-
-            <div>
+       
+            <div className="coolinput" >
               
-              <label htmlFor="phone">Phone Number</label>
+            <label className="textinput" htmlFor="phone">Phone Number</label>
               
               <input
-                type="number"
-                className="form-control"
+
+                type="tel"
+                className="input"   
                 id="phone"
                 min="0"
                 value={number}
@@ -1040,9 +1068,9 @@ const Form = (props) => {
 
             <div className="Equipment">
               <div>
-                <h1 style={{ marginTop: "30px", marginBottom: "10px" }}>
+                <h2 style={{ marginTop: "30px", marginBottom: "10px" }}>
                   Equipment
-                </h1>
+                </h2>
 
                 <div className="d-flex justify-content-flex-start border-bottom">
                   <p  style={{textAlign: "left", marginTop: "23px", marginBottom: "30px", }} > Comfort (optional)  </p>

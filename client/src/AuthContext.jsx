@@ -79,7 +79,7 @@ export const AuthProvider = ({ children }) => {
   };
 
 
-  const registerClient = async (firstName, lastName, emailRegister, roleClient,phoneNumber,birthday,gender,adress,postalCode,city, passwordRegister, confirmPassword) => {
+  const registerClient = async (firstName, lastName, emailRegister, roleClient,phoneNumber,birthday,gender, passwordRegister, confirmPassword) => {
     try {
       const response = await axios.post('http://localhost:8000/api/register', {
         firstName,
@@ -89,9 +89,6 @@ export const AuthProvider = ({ children }) => {
         phoneNumber,
         birthday,
         gender,
-        adress,
-        postalCode,
-        city,
         password: passwordRegister,
         confirmPassword,
 
