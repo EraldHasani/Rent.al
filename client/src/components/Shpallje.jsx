@@ -53,7 +53,7 @@ const Shpallje = () => {
 
 
   <div style={{ width: '70%' }}>
-    <h2>Shpallje</h2>
+    <h2>Announcement</h2>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px' }}>
       {posts.map(post => (
         <div key={post.id} style={{ backgroundColor: '#f9f9f9', padding: '20px', borderRadius: '5px' }}>
@@ -61,9 +61,9 @@ const Shpallje = () => {
             <Link to={`/shpallje/${post._id}`}>
               <h4 style={{ marginTop: '0' }}>{post.destinacioni}</h4>
             </Link>
-            <p>Pershkrimi: {post.pershkrimi}</p>
-            <p>Cmimi Ditor: {post.cmimiDitor}</p>
-            <p>Data Rezervimit : {post.dataRezervimit}</p>
+            <p>Description: {post.pershkrimi}</p>
+            <p>Daily Price: {post.cmimiDitor}</p>
+            <p>Reservation Day : {post.dataRezervimit}</p>
           </div>
         </div>
         

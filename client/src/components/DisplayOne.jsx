@@ -158,7 +158,7 @@ const handleEZene = () => {
                   data-bs-target="#RentModal"
                   className="btn bg-color custom-btn bordered mt-3"
                 >
-                  Merr Me Qera
+                  Rent
                 </button>
       ) : null
 
@@ -176,7 +176,7 @@ const handleEZene = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h2 className="modal-title" id="membershipFormLabel">
-                Merr me Qera
+              Rent
               </h2>
 
               <button
@@ -197,7 +197,7 @@ const handleEZene = () => {
                 <input
                   type="number"
                   className="form-control mb-3"
-                    placeholder="Numri i diteve"
+                    placeholder="Number of Days"
                   value={ditet}
                   onChange={(e) => setDitet(e.target.value)}
                 />
@@ -205,7 +205,7 @@ const handleEZene = () => {
                 <input
                   type="date"
                   className="form-control mb-3"
-                  placeholder="Data e marrjes"
+                  placeholder="Reservation Day"
                   value={DataMarrjes}
                   onChange={(e) => setDataMarrjes(e.target.value)}
                 />
@@ -217,7 +217,7 @@ const handleEZene = () => {
                   name="submit"
                   data-bs-dismiss="modal"
                 >
-                  Rezervo
+                  Book
                 </button>
               </form>
             </div>
@@ -229,13 +229,13 @@ const handleEZene = () => {
   <div>
 {
     logedUser &&form &&  logedUser._id=== form.userId && !form.eLire ? (
-        <button  className="btn bg-color custom-btn bordered mt-3"  onClick={handleELire}>Beje te  lire</button>
+        <button  className="btn bg-color custom-btn bordered mt-3"  onClick={handleELire}>Make Available</button>
     ) : null
 }
 
       {
    logedUser  &&form && logedUser._id=== form.userId && form.eLire ? (
-        <button  className="btn bg-color custom-btn bordered mt-3" onClick={handleEZene}>Beje te Zene</button>
+        <button  className="btn bg-color custom-btn bordered mt-3" onClick={handleEZene}>Make Occupied</button>
     ) : null
 }
 
@@ -274,7 +274,7 @@ const handleEZene = () => {
           </p> 
 
             <p> <i className="fa fa-road text mr-1 m-2"></i>
-              {form ? form.kilometrat : null} km</p>
+              {form ? form.kilometrat : null} KM</p>
 
             <p>
           <TbManualGearbox /> {form ? form.gearbox : null} </p>
@@ -291,7 +291,7 @@ const handleEZene = () => {
               <div className="d-flex flex-column me-4">
              
               <div>
-                  <label>Targa</label>
+                  <label>Number Plate</label>
                   <p className="fw-bold">
                     {form ? form.targa : "Placeholder qyteti"}
                   </p>
@@ -300,7 +300,7 @@ const handleEZene = () => {
              
                 <div>
 
-                  <label>Çmimi ditor </label>
+                  <label>Per Day</label>
                   <p className="fw-bold">
               
                     {form ? form.price : "Placeholder Model"} €
@@ -308,20 +308,20 @@ const handleEZene = () => {
                 </div>
                
                 <div>
-                  <label>Ngjyra</label>
+                  <label>Color</label>
                   <p className="fw-bold">
                     {form ? form.mainColor : "Placeholder Model"}
                   </p>
                 </div>
                 <div>
-                  <label>Ngjyra e interiorit</label>
+                  <label>Interior Color</label>
                   <p className="fw-bold">
                     {form ? form.interiorColor : "Placeholder qyteti"}
                   </p>
                 </div>
                 
                 <div>
-                  <label>Numri i vendeve</label>
+                  <label>Number of Seats</label>
                   <p className="fw-bold">
                     {form ? form.numberOfSeats : "Placeholder Model"}
                   </p>
@@ -330,32 +330,32 @@ const handleEZene = () => {
 
               <div className="d-flex flex-column me-4">
                 <div>
-                  <label>Fuqia</label>
+                  <label>Power HP</label>
                   <p className="fw-bold">
                     {form ? form.powerInHp : "Placeholder Model"} /hp
                   </p>
                 </div>
                 <div>
-                  <label>Volumi cilindrik</label>
+                  <label>Engine displacement</label>
                   <p className="fw-bold">
                     {form ? form.cylinderVolumeInLiters : "Placeholder Model"}
                   </p>
                 </div>
                 <div>
-                  <label>Pesha</label>
+                  <label>Weight</label>
                   <p className="fw-bold">
                     {form ? form.netWeightInKg : "Placeholder Model"} kg
                   </p>
                 </div>
                 <div>
-                  <label>Emetimet e CO2</label>
+                  <label>Emission Standard</label>
                   <p className="fw-bold">
                     {form ? form.co2EmissionsIgKm : "Placeholder Model"}
                   </p>
                 </div>
                
                 <div>
-                  <label>Pesha e makinës</label>
+                  <label>Car Weight</label>
                   <p className="fw-bold">
                     {form ? form.netWeightInKg : "Placeholder Model"}
                   </p>
@@ -364,13 +364,13 @@ const handleEZene = () => {
 
               <div className="d-flex flex-column">
                 <div>
-                  <label>Numri i dyerve</label>
+                  <label>Number of Doors</label>
                   <p className="fw-bold">
                     {form ? form.numberOfDoors : "Placeholder Model"}
                   </p>
                 </div>
                 <div>
-                  <label>Vendndodhja e makinës</label>
+                  <label>City Location</label>
                   <p className="fw-bold">
                     {" "}
                     {form ? form.qyteti : "Placeholder qyteti"}
@@ -379,7 +379,7 @@ const handleEZene = () => {
                
               
                 <div>
-                  <label>Numër shasie</label>
+                  <label>Chassis Nr.</label>
                   <p className="fw-bold">
                     {form ? form.shasia : "Placeholder Model"}
                   </p>
@@ -400,7 +400,7 @@ const handleEZene = () => {
 
 
           <div className=" p-5 m-4">
-  <h1>Pajisjet</h1>
+  <h1>Options</h1>
   {form && Object.keys(form).length > 0 && (
     <div className="row row-cols-1 g-2">
 

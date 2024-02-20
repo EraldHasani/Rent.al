@@ -146,7 +146,7 @@ const Dashboard = () => {
     <div style={{ display: 'flex', alignItems: 'flex-start',marginTop:"100px" }}>
   <div style={{ width: '20%', marginRight: '20px' }}>
   <div className="position-relative overflow-auto ">
-  <label className='m-3'>Qyteti</label>
+  <label className='m-3'>City</label>
   <div className='row m-2 d-flex justify-content-evenly'>
 
     <label  htmlFor="Tiranë">
@@ -222,7 +222,7 @@ const Dashboard = () => {
   </div>
 
   <div>
-  <label className='m-3'>Fuel</label>
+  <label className='m-3'>Fuel Type</label>
   <div className='row m-2'>
       <label htmlFor="Diesel">
       <input  className='m-2' type="checkbox" id="Diesel" name="fuel" value="Diesel" onChange={filterPosts} checked={fuel.includes("Diesel")} />
@@ -237,7 +237,7 @@ const Dashboard = () => {
   </div>
 
   <div>
-  <label className='m-3'>Brandi</label>
+  <label className='m-3'>Brand</label>
   <div className='row m-2'>
       
       <label htmlFor="Audi">
@@ -293,7 +293,7 @@ const Dashboard = () => {
 
 
   <div>
-  <label className='m-3'>Viti i prodhimit</label>
+  <label className='m-3'>Year Model</label>
   <div className='row m-2'> 
       <label htmlFor="2008">
         <input  className='m-2' type="checkbox" id="2008" name="vitiProdhimit" value="2008" onChange={filterPosts} checked={vitiProdhimit.includes("2008")} />
@@ -305,7 +305,7 @@ const Dashboard = () => {
       </label>
     <label htmlFor="2010">
         <input  className='m-2' type="checkbox" id="2010" name="vitiProdhimit" value="2010" onChange={filterPosts} checked={vitiProdhimit.includes("2010")} />
-        2015
+        2010
       </label>
     <label htmlFor="2011">
         <input  className='m-2' type="checkbox" id="2011" name="vitiProdhimit" value="2011" onChange={filterPosts} checked={vitiProdhimit.includes("2011")} />
@@ -428,7 +428,7 @@ const Dashboard = () => {
                             <div className="px-2">
                                 <i className="fa fa-road text-danger mr-1"></i>
                                 <h6 className='small'>
-                                <span>{post.kilometrat}km</span>
+                                <span>{post.kilometrat}KM</span>
 
                                 </h6>
                             </div>
