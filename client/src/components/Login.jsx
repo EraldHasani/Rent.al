@@ -82,7 +82,7 @@ const Login = () => {
             <div className="col-lg-8 col-md-10 mx-auto col-12">
               <div className="hero-text text-center" style={{marginTop: "-30px"}}>
                 <h6
-                  style={{ color: "black!important", opacity: "0!important"}}
+                  style={{ color: "orangered!important", opacity: "0!important"}}
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >

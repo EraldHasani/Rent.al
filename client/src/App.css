@@ -93,6 +93,9 @@ h6 {
   line-height: normal;
 
 }
+.hero-text h6{
+  color: orangered!important;
+}
 
 
 
