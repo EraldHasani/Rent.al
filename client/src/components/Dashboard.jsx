@@ -134,7 +134,23 @@ const Dashboard = () => {
     setFuel("");
     setReset(true);
   }
-  
+  const openFilters = () => {
+    const filter = document.querySelector('#filtersOpen');
+    const mainContent = document.querySelector('#mainContentHere');
+    filter.classList.remove('w-0');
+    filter.classList.add('w-20');
+    mainContent.classList.remove('w-100');
+    mainContent.classList.add('w-80');
+  }
+
+  const closeFilters = () => {
+    const filter = document.querySelector('#filtersOpen');
+    const mainContent = document.querySelector('#mainContentHere');
+    filter.classList.remove('w-20');
+    filter.classList.add('w-0');
+    mainContent.classList.remove('w-80');
+    mainContent.classList.add('w-100');
+  }
 
   return (
     <>
@@ -149,217 +165,223 @@ const Dashboard = () => {
 
 
       {/* //filter/ */}
-
-  <div className="cd-filter" style={{ width: '20%', marginRight: '20px' }}>
-  <div className="position-relative overflow-auto ">
- 
-  <div className=" row d-flex justify-content-evenly" style={{marginTop:"75px",marginLeft:"4px" }}>
-  <details className='row '> 
-  <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#ededede0',border: '1px solid #dadada',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)'}}>
-    <span className='m-2'>City</span>
-    </summary>
-<div  className='row m-2'>
+      <a onClick={openFilters} class="cd-filter-trigger mt-5 filterText">Filters</a>
 
 
-    <label   htmlFor="Tiranë">
-      <input className='m-2' type="checkbox" id="Tiranë" name="qyteti" value="Tiranë" onChange={filterPosts} checked={qyteti.includes("Tiranë")} />
-      Tiranë
-    </label>
-    <label htmlFor="Durrës">
-      <input   className='m-2'type="checkbox" id="Durrës" name="qyteti" value="Durrës" onChange={filterPosts} checked={qyteti.includes("Durrës")} />
-      Durrës
-    </label>
-    <label htmlFor='Vlorë'>
-      <input   className='m-2'type="checkbox" id="Vlorë" name="qyteti" value="Vlorë" onChange={filterPosts} checked={qyteti.includes("Vlorë")} />
-      Vlorë
-    </label>
-    <label htmlFor='Shkodër'>
-      <input  className='m-2' type="checkbox" id="Shkodër" name="qyteti" value="Shkodër" onChange={filterPosts} checked={qyteti.includes("Shkodër")} />
-      Shkodër
-    </label>
-    <label htmlFor='Korçë'>
-      <input  className='m-2' type="checkbox" id="Korçë" name="qyteti" value="Korçë" onChange={filterPosts} checked={qyteti.includes("Korçë")} />
-      Korçë
-    </label>
-    <label htmlFor='Fier'>
-      <input  className='m-2' type="checkbox" id="Fier" name="qyteti" value="Fier" onChange={filterPosts} checked={qyteti.includes("Fier")} />
-      Fier
-    </label>
-    <label htmlFor='Elbasan'>
-      <input  className='m-2' type="checkbox" id="Elbasan" name="qyteti" value="Elbasan" onChange={filterPosts} checked={qyteti.includes("Elbasan")} />
-      Elbasan
-    </label>
-    <label htmlFor='Berat'>
-      <input  className='m-2'type="checkbox" id="Berat" name="qyteti" value="Berat" onChange={filterPosts} checked={qyteti.includes("Berat")} />
-      Berat
-    </label>
-    <label htmlFor='Lushnjë'>
-      <input  className='m-2' type="checkbox" id="Lushnjë" name="qyteti" value="Lushnjë" onChange={filterPosts} checked={qyteti.includes("Lushnjë")} />
-      Lushnjë
-    </label>
-    <label htmlFor='Kavajë'>
-      <input  className='m-2' type="checkbox" id="Kavajë" name="qyteti" value="Kavajë" onChange={filterPosts} checked={qyteti.includes("Kavajë")} />
-      Kavajë
-    </label>
-    <label htmlFor='Pogradec'>
-      <input   className='m-2'type="checkbox" id="Pogradec" name="qyteti" value="Pogradec" onChange={filterPosts} checked={qyteti.includes("Pogradec")} />
-      Pogradec
-    </label>
-    <label htmlFor='Lezhë'>
-      <input  className='m-2' type="checkbox" id="Lezhë" name="qyteti" value="Lezhë" onChange={filterPosts} checked={qyteti.includes("Lezhë")} />
-      Lezhë
-    </label>
-    <label htmlFor='Gjirkoastër'>
-      <input  className='m-2' type="checkbox" id="Gjirkoastër" name="qyteti" value="Gjirkoastër" onChange={filterPosts} checked={qyteti.includes("Gjirkoastër")} />
-      Gjirkoastër
-    </label>
-    <label htmlFor='Sarande'>
-      <input  className='m-2' type="checkbox" id="Sarande" name="qyteti" value="Sarande" onChange={filterPosts} checked={qyteti.includes("Sarande")} />
-      Sarande
-    </label>
-    <label htmlFor='Peshkopi'>
-      <input  className='m-2' type="checkbox" id="Peshkopi" name="qyteti" value="Peshkopi" onChange={filterPosts} checked={qyteti.includes("Peshkopi")} />
-      Peshkopi
-    </label>
-   
-    <label htmlFor='Krujë'>
-      <input   className='m-2'type="checkbox" id="Krujë" name="qyteti" value="Krujë" onChange={filterPosts} checked={qyteti.includes("Krujë")} />
-      Krujë
-    </label>
-    </div>
-    </details>
-  </div>
+      <div id='filtersOpen' className="cd-filter w-0 mt-2">
+        <div className="d-flex align-items-center" style={{marginTop: "4rem"}}>
+        <p className="" onClick={handleReset} style={{marginLeft: "160px", marginRight: "10px", fontStyle:"italic", cursor: "pointer"}}>Reset</p>
+        <p  onClick={closeFilters} className='btn bg-color'>Close</p>
 
-   <div className=" row d-flex justify-content-evenly" style={{marginTop:"50px",marginLeft:"5px" }}>
-    <details className='row'>
-    <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#ededede0',border: '1px solid #dadada',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)'}}>
-      <span className='m-2'>Brand</span>
 
-      </summary>
-  <div className='row m-2'>
+        </div>
+      <div className="position-relative overflow-auto ">
+    
+      <div className=" row d-flex justify-content-evenly filtersDiv filterBigDiv" style={{marginTop:"75px",marginLeft:"5px" }}>
+      <details className='row'> 
+
+      <summary className='filterSummary'>
+        <span className='m-2'>City</span>
+        </summary>
+    <div  className='row m-2'>
+        <label   htmlFor="Tiranë" style={{ display: 'flex', alignItems: 'center' }}>
+          <input className='m-2' type="checkbox" id="Tiranë" name="qyteti" value="Tiranë" onChange={filterPosts} checked={qyteti.includes("Tiranë")} />
+          Tiranë
+        </label>
+        <label htmlFor="Durrës" style={{ display: 'flex', alignItems: 'center' }} >
+          <input   className='m-2'type="checkbox" id="Durrës" name="qyteti" value="Durrës" onChange={filterPosts} checked={qyteti.includes("Durrës")} />
+          Durrës
+        </label>
+        <label htmlFor='Vlorë' style={{ display: 'flex', alignItems: 'center' }} >
+          <input   className='m-2'type="checkbox" id="Vlorë" name="qyteti" value="Vlorë" onChange={filterPosts} checked={qyteti.includes("Vlorë")} />
+          Vlorë
+        </label>
+        <label htmlFor='Shkodër' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Shkodër" name="qyteti" value="Shkodër" onChange={filterPosts} checked={qyteti.includes("Shkodër")} />
+          Shkodër
+        </label>
+        <label htmlFor='Korçë ' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Korçë" name="qyteti" value="Korçë" onChange={filterPosts} checked={qyteti.includes("Korçë")} />
+          Korçë
+        </label>
+        <label htmlFor='Fier' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Fier" name="qyteti" value="Fier" onChange={filterPosts} checked={qyteti.includes("Fier")} />
+          Fier
+        </label>
+        <label htmlFor='Elbasan' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Elbasan" name="qyteti" value="Elbasan" onChange={filterPosts} checked={qyteti.includes("Elbasan")} />
+          Elbasan
+        </label>
+        <label htmlFor='Berat' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2'type="checkbox" id="Berat" name="qyteti" value="Berat" onChange={filterPosts} checked={qyteti.includes("Berat")} />
+          Berat
+        </label>
+        <label htmlFor='Lushnjë' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Lushnjë" name="qyteti" value="Lushnjë" onChange={filterPosts} checked={qyteti.includes("Lushnjë")} />
+          Lushnjë
+        </label>
+        <label htmlFor='Kavajë' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Kavajë" name="qyteti" value="Kavajë" onChange={filterPosts} checked={qyteti.includes("Kavajë")} />
+          Kavajë
+        </label>
+        <label htmlFor='Pogradec' style={{ display: 'flex', alignItems: 'center' }} >
+          <input   className='m-2'type="checkbox" id="Pogradec" name="qyteti" value="Pogradec" onChange={filterPosts} checked={qyteti.includes("Pogradec")} />
+          Pogradec
+        </label>
+        <label htmlFor='Lezhë' style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Lezhë" name="qyteti" value="Lezhë" onChange={filterPosts} checked={qyteti.includes("Lezhë")} />
+          Lezhë
+        </label>
+        <label htmlFor='Gjirkoastër'style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Gjirkoastër" name="qyteti" value="Gjirkoastër" onChange={filterPosts} checked={qyteti.includes("Gjirkoastër")} />
+          Gjirkoastër
+        </label>
+        <label htmlFor='Sarande'style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Sarande" name="qyteti" value="Sarande" onChange={filterPosts} checked={qyteti.includes("Sarande")} />
+          Sarande
+        </label>
+        <label htmlFor='Peshkopi'style={{ display: 'flex', alignItems: 'center' }} >
+          <input  className='m-2' type="checkbox" id="Peshkopi" name="qyteti" value="Peshkopi" onChange={filterPosts} checked={qyteti.includes("Peshkopi")} />
+          Peshkopi
+        </label>
       
-      <label htmlFor="Audi">
-        <input  className='m-2' type="checkbox" id="Audi" name="brandi" value="Audi" onChange={filterPosts} checked={brandi.includes("Audi")} />
-        Audi
-      </label>
-  
-      <label htmlFor="BMW">
-        <input  className='m-2' type="checkbox" id="BMW" name="brandi" value="BMW" onChange={filterPosts} checked={brandi.includes("BMW")} />
-        BMW
-      </label>
-      <label htmlFor='Mercedes-Benz'>
-        <input  className='m-2' type="checkbox" id="Mercedes-Benz" name="brandi" value="Mercedes-Benz" onChange={filterPosts} checked={brandi.includes("Mercedes-Benz")} />
-        Mercedes-Benz
-        
-      </label>
-      <label htmlFor='Toyota'>
-        <input  className='m-2' type="checkbox" id="Toyota" name="brandi" value="Toyota" onChange={filterPosts} checked={brandi.includes("Toyota")} />
-        Toyota
-      </label>
-      <label htmlFor='Volkswagen'>
-        <input  className='m-2' type="checkbox" id="Volkswagen" name="brandi" value="Volkswagen" onChange={filterPosts} checked={brandi.includes("Volkswagen")} />
-        Volkswagen
-      </label>
-      <label htmlFor='Fiat'>
-        <input   className='m-2'type="checkbox" id="Fiat" name="brandi" value="Fiat" onChange={filterPosts} checked={brandi.includes("Fiat")} />
-        Fiat
-      </label>
-      <label htmlFor='Peugeot'>
-        <input   className='m-2'type="checkbox" id="Peugeot" name="brandi" value="Peugeot" onChange={filterPosts} checked={brandi.includes("Peugeot")} />
-        Peugeot
-      </label>
-      <label htmlFor='Tesla'>
-        <input   className='m-2'type="checkbox" id="Tesla" name="brandi" value="Tesla" onChange={filterPosts} checked={brandi.includes("Tesla")} />
-        Tesla
-      </label>
-      <label htmlFor='Porsche'>
-        <input  className='m-2' type="checkbox" id="Porsche" name="brandi" value="Porsche" onChange={filterPosts} checked={brandi.includes("Porsche")} />
-        Opel
-      </label>
-      <label htmlFor='Lamborghini'>
-        <input  className='m-2' type="checkbox" id="Lamborghini" name="brandi" value="Lamborghini" onChange={filterPosts} checked={brandi.includes("Lamborghini")} />
-        Lamborghini
-      </label>
-      <label htmlFor='Ferrari'>
-        <input   className='m-2'type="checkbox" id="Ferrari" name="brandi" value="Ferrari" onChange={filterPosts} checked={brandi.includes("Ferrari")} />
-        Ferrari
-      </label>
+        <label htmlFor='Krujë'style={{ display: 'flex', alignItems: 'center' }} >
+          <input   className='m-2'type="checkbox" id="Krujë" name="qyteti" value="Krujë" onChange={filterPosts} checked={qyteti.includes("Krujë")} />
+          Krujë
+        </label>
+        </div>
+        </details>
+      </div>
+
+      <div className=" row d-flex justify-content-evenly filterBigDiv" style={{marginTop:"50px",marginLeft:"5px" }}>
+        <details className='row'>
+        <summary className='filterSummary' >
+          <span className='m-2'>Brand</span>
+
+          </summary>
+      <div className='row m-2'>
+          
+          <label htmlFor="Audi" style={{ display: 'flex', alignItems: 'center' }} >
+            <input  className='m-2' type="checkbox" id="Audi" name="brandi" value="Audi" onChange={filterPosts} checked={brandi.includes("Audi")} />
+            Audi
+          </label>
+      
+          <label htmlFor="BMW" style={{ display: 'flex', alignItems: 'center' }} >
+            <input  className='m-2' type="checkbox" id="BMW" name="brandi" value="BMW" onChange={filterPosts} checked={brandi.includes("BMW")} />
+            BMW
+          </label>
+          <label htmlFor='Mercedes-Benz' style={{ display: 'flex', alignItems: 'center' }} >
+            <input  className='m-2' type="checkbox" id="Mercedes-Benz" name="brandi" value="Mercedes-Benz" onChange={filterPosts} checked={brandi.includes("Mercedes-Benz")} />
+            Mercedes-Benz
+            
+          </label>
+          <label htmlFor='Toyota' style={{ display: 'flex', alignItems: 'center' }} >
+            <input  className='m-2' type="checkbox" id="Toyota" name="brandi" value="Toyota" onChange={filterPosts} checked={brandi.includes("Toyota")} />
+            Toyota
+          </label>
+          <label htmlFor='Volkswagen' style={{ display: 'flex', alignItems: 'center' }} >
+            <input  className='m-2' type="checkbox" id="Volkswagen" name="brandi" value="Volkswagen" onChange={filterPosts} checked={brandi.includes("Volkswagen")} />
+            Volkswagen
+          </label>
+          <label htmlFor='Fiat' style={{ display: 'flex', alignItems: 'center' }} >
+            <input   className='m-2'type="checkbox" id="Fiat" name="brandi" value="Fiat" onChange={filterPosts} checked={brandi.includes("Fiat")} />
+            Fiat
+          </label> 
+          <label htmlFor='Peugeot' style={{ display: 'flex', alignItems: 'center' }} >
+            <input   className='m-2'type="checkbox" id="Peugeot" name="brandi" value="Peugeot" onChange={filterPosts} checked={brandi.includes("Peugeot")} />
+            Peugeot
+          </label>
+          <label htmlFor='Tesla' style={{ display: 'flex', alignItems: 'center' }} >
+            <input   className='m-2'type="checkbox" id="Tesla" name="brandi" value="Tesla" onChange={filterPosts} checked={brandi.includes("Tesla")} />
+            Tesla
+          </label>
+          <label htmlFor='Porsche' style={{ display: 'flex', alignItems: 'center' }} >
+            <input  className='m-2' type="checkbox" id="Porsche" name="brandi" value="Porsche" onChange={filterPosts} checked={brandi.includes("Porsche")} />
+            Opel
+          </label>
+          <label htmlFor='Lamborghini' style={{ display: 'flex', alignItems: 'center' }} >
+            <input  className='m-2' type="checkbox" id="Lamborghini" name="brandi" value="Lamborghini" onChange={filterPosts} checked={brandi.includes("Lamborghini")} />
+            Lamborghini
+          </label>
+          <label htmlFor='Ferrari' style={{ display: 'flex', alignItems: 'center' }} >
+            <input   className='m-2'type="checkbox" id="Ferrari" name="brandi" value="Ferrari" onChange={filterPosts} checked={brandi.includes("Ferrari")} />
+            Ferrari
+          </label>
+          </div>
+          </details>
+
+      </div>
+
+
+
+      <div className="row d-flex justify-content-evenly filterBigDiv" style={{ marginTop: "50px", marginLeft: "4px" }}>
+        <details className='row'>
+        <summary className='filterSummary'>
+      <span className='m-2' htmlFor='fuelToogle'>Fuel Type</span>
+    </summary >
+
+            <div className='row m-2'>
+                <label htmlFor="Diesel" style={{ display: 'flex', alignItems: 'center' }} >
+                    <input className='cyberpunk-checkbox m-2'  type="checkbox" id="Diesel" name="fuel" value="Diesel" onChange={filterPosts} checked={fuel.includes("Diesel")} />
+                    Diesel
+                </label>
+                <label htmlFor="Gasoline" style={{ display: 'flex', alignItems: 'center' }}>
+                    <input className='cyberpunk-checkbox m-2' type="checkbox" id="Gasoline" name="fuel" value="Gasoline" onChange={filterPosts} checked={fuel.includes("Gasoline")} />
+                    Gasoline
+                </label>
+                <label htmlFor="Electricity" style={{ display: 'flex', alignItems: 'center' }}>
+                    <input className='cyberpunk-checkbox m-2' type="checkbox" id="Electricity" name="fuel" value="Electricity" onChange={filterPosts} checked={fuel.includes("Electricity")} />
+                    Electricity
+                </label>
+                <label htmlFor="Gas" style={{ display: 'flex', alignItems: 'center' }}>
+                    <input className='cyberpunk-checkbox m-2' type="checkbox" id="Gas" name="fuel" value="Gas" onChange={filterPosts} checked={fuel.includes("Gas")} />
+                    Gas
+                </label>
+                <label htmlFor="ElectricityPetrol" style={{ display: 'flex', alignItems: 'center' }}>
+                    <input className='cyberpunk-checkbox m-2' type="checkbox" id="ElectricityPetrol" name="fuel" value="ElectricityPetrol" onChange={filterPosts} checked={fuel.includes("ElectricityPetrol")} />
+                    Hybrid
+                </label>
+            </div>
+        </details>
+    </div>
+
+
+
+      <div className=" row d-flex justify-content-evenly filterBigDiv" style={{marginTop:"50px",marginLeft:"4px" }}>
+        <details className='row'>
+        <summary  className='filterSummary'>
+          <span className='m-2'>Year Model</span>
+          </summary>
+      <div className='row m-2'> 
+      <label className=''></label>
+        {[...Array(2024-2008+1)].map((_, index) => {
+            const year = 2024 - index;
+            return (
+                <label key={year} htmlFor={year} style={{ display: 'flex', alignItems: 'center' }} >
+                    <input  
+                        className='m-2' 
+                        type="checkbox" 
+                        id={year} 
+                        name="vitiProdhimit" 
+                        value={year} 
+                        onChange={filterPosts} 
+                        checked={vitiProdhimit.includes(year.toString())}
+                    />
+                    {year}
+                </label>
+            );
+        })}
       </div>
       </details>
 
-  </div>
+
+      </div>
 
 
-
-  <div className="row d-flex justify-content-evenly" style={{ marginTop: "50px", marginLeft: "4px" }}>
-    <details className='row'>
-    <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#f0f0f0',border: '1px solid #ccc',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>
-  <span className='m-2' htmlFor='fuelToogle'>Fuel Type</span>
-</summary>
-
-        <div className='row m-2'>
-            <label htmlFor="Diesel" style={{ display: 'flex', alignItems: 'center' }} >
-                <input className='cyberpunk-checkbox m-2'  type="checkbox" id="Diesel" name="fuel" value="Diesel" onChange={filterPosts} checked={fuel.includes("Diesel")} />
-                Diesel
-            </label>
-            <label htmlFor="Gasoline" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='cyberpunk-checkbox m-2' type="checkbox" id="Gasoline" name="fuel" value="Gasoline" onChange={filterPosts} checked={fuel.includes("Gasoline")} />
-                Gasoline
-            </label>
-            <label htmlFor="Electricity" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='cyberpunk-checkbox m-2' type="checkbox" id="Electricity" name="fuel" value="Electricity" onChange={filterPosts} checked={fuel.includes("Electricity")} />
-                Electricity
-            </label>
-            <label htmlFor="Gas" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='cyberpunk-checkbox m-2' type="checkbox" id="Gas" name="fuel" value="Gas" onChange={filterPosts} checked={fuel.includes("Gas")} />
-                Gas
-            </label>
-            <label htmlFor="ElectricityPetrol" style={{ display: 'flex', alignItems: 'center' }}>
-                <input className='cyberpunk-checkbox m-2' type="checkbox" id="ElectricityPetrol" name="fuel" value="ElectricityPetrol" onChange={filterPosts} checked={fuel.includes("ElectricityPetrol")} />
-                Hybrid
-            </label>
-        </div>
-    </details>
-</div>
+    </div>
 
 
-
-  <div className=" row d-flex justify-content-evenly" style={{marginTop:"50px",marginLeft:"4px" }}>
-    <details className='row'>
-    <summary style={{cursor:'pointer',padding: '0.5rem 1rem',backgroundColor: '#ededede0',border: '1px solid #dadada',borderRadius: '4px', marginBottom: '10px',boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)'}}>
-      <span className='m-2'>Year Model</span>
-      </summary>
-  <div className='row m-2'> 
-  <label className=''></label>
-    {[...Array(2024-2008+1)].map((_, index) => {
-        const year = 2024 - index;
-        return (
-            <label key={year} htmlFor={year}>
-                <input  
-                    className='m-2' 
-                    type="checkbox" 
-                    id={year} 
-                    name="vitiProdhimit" 
-                    value={year} 
-                    onChange={filterPosts} 
-                    checked={vitiProdhimit.includes(year.toString())}
-                />
-                {year}
-            </label>
-        );
-    })}
-  </div>
-  </details>
-
-
-  </div>
-
-
-    <button className="ressetButton m-4" onClick={handleReset}>Reset</button>
-</div>
-
-
-                    </div>
+      </div>
 
 
 
@@ -368,7 +390,7 @@ const Dashboard = () => {
 
 
                     {/* Dashboard */}
-  <div style={{ width: '70%' }}>
+  <div id='mainContentHere' className='w-100'>
 
 
       <div className="container-fluid ">
@@ -389,25 +411,25 @@ const Dashboard = () => {
                             <div className="px-2">
                                 <i className="fa fa-car text-danger mr-1"> 
                                 </i>
-                                <h6 className='small'>
+                                <h4 className='small'>
                                <span >{post.vitiProdhimit}</span>
 
-                              </h6>
+                              </h4>
 
                             </div>
                             <div className="px-2 border-left border-right">
                                 <i className="fa fa-cogs text-danger mr-1"></i>
-                                <h6 className='small'>
+                                <h4 className='small'>
                                 <span>{post.gearbox}</span>
 
-                                </h6>
+                                </h4>
                             </div>
                             <div className="px-2">
                                 <i className="fa fa-road text-danger mr-1"></i>
-                                <h6 className='small'>
+                                <h4 className='small'>
                                 <span>{post.kilometrat}KM</span>
 
-                                </h6>
+                                </h4>
                             </div>
                         </div>
                         <a   className="btn bg-color custom-btn bordered mt-3" href="">{post.price} €/ Day</a>

@@ -25,6 +25,7 @@ getFormById: async (req, res) => {
 },
 
 createForm: async (req, res) => {
+    console.log(req.body);
     const form = new Form(req.body);
     try {
     const newForm = await form.save();

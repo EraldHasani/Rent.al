@@ -80,9 +80,9 @@ const Login = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 col-md-10 mx-auto col-12">
-              <div className="hero-text mt-5 text-center">
+              <div className="hero-text text-center" style={{marginTop: "-30px"}}>
                 <h6
-                  style={{ color: "black!important" }}
+                  style={{ color: "black!important", opacity: "0!important"}}
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >

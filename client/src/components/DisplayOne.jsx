@@ -314,12 +314,7 @@ const handleEZene = () => {
                     {form ? form.mainColor : "Placeholder Model"}
                   </p>
                 </div>
-                <div>
-                  <label>Interior Color</label>
-                  <p className="fw-bold">
-                    {form ? form.interiorColor : "Placeholder qyteti"}
-                  </p>
-                </div>
+               
                 
                 <div>
                   <label>Number of Seats</label>
@@ -327,19 +322,23 @@ const handleEZene = () => {
                     {form ? form.numberOfSeats : "Placeholder Model"}
                   </p>
                 </div>
+               
               </div>
+              
+              
 
               <div className="d-flex flex-column me-4">
-                <div>
-                  <label>Power HP</label>
+              <div>
+                  <label>Chassis Nr.</label>
                   <p className="fw-bold">
-                    {form ? form.powerInHp : "Placeholder Model"} /hp
+                    {form ? form.shasia : "Placeholder Model"}
                   </p>
                 </div>
+               
                 <div>
                   <label>Engine displacement</label>
                   <p className="fw-bold">
-                    {form ? form.cylinderVolumeInLiters : "Placeholder Model"}
+                    {form ? form.cylinderVolumeInLiters : "Placeholder Model"} cm3
                   </p>
                 </div>
                 <div>
@@ -351,19 +350,22 @@ const handleEZene = () => {
                 <div>
                   <label>Emission Standard</label>
                   <p className="fw-bold">
-                    {form ? form.co2EmissionsIgKm : "Placeholder Model"}
+                Euro 5
                   </p>
                 </div>
                
-                <div>
-                  <label>Car Weight</label>
-                  <p className="fw-bold">
-                    {form ? form.netWeightInKg : "Placeholder Model"}
-                  </p>
-                </div>
+              
               </div>
 
               <div className="d-flex flex-column">
+
+              <div>
+                  <label>City Location</label>
+                  <p className="fw-bold">
+                    {" "}
+                    {form ? form.qyteti : "Placeholder qyteti"}
+                  </p>
+                </div>
                 <div>
                   <label>Number of Doors</label>
                   <p className="fw-bold">
@@ -371,20 +373,15 @@ const handleEZene = () => {
                   </p>
                 </div>
                 <div>
-                  <label>City Location</label>
+                  <label>Power HP</label>
                   <p className="fw-bold">
-                    {" "}
-                    {form ? form.qyteti : "Placeholder qyteti"}
+                    {form ? form.powerInHp : "Placeholder Model"} /hp
                   </p>
                 </div>
+              
                
               
-                <div>
-                  <label>Chassis Nr.</label>
-                  <p className="fw-bold">
-                    {form ? form.shasia : "Placeholder Model"}
-                  </p>
-                </div>
+                
               </div>
             </div>
           </div>

@@ -129,6 +129,7 @@ const Form = (props) => {
 
   const CreateCar = async (e) => {
     e.preventDefault();
+    console.log("CreateCar")
     if (
       shasia.length < 3 ||
       targa.length < 3 ||
@@ -770,14 +771,18 @@ const Form = (props) => {
                 <label className="textinput" htmlFor="co2EmissionsIgKm">
                   Emission Standard (optional)
                 </label>
-                <input
-                  type="number"
+                <select
+                  type="text"
                   className="input"  
-                  min="0"
+                  name=""
                   id="co2EmissionsIgKm"
                   value={co2EmissionsIgKm}
                   onChange={(e) => setCo2EmissionsIgKm(e.target.value)}
-                />
+                >
+                  <option value="" disabled>Select</option>
+                  <option value="euro5">Euro 5</option>
+                  <option value="euro6">Euro 6</option>
+                  </select>
               </div>
               <div className="coolinput">
                 <label className="textinput" htmlFor="gearbox">Gearbox</label>

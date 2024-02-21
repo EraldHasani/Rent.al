@@ -102,7 +102,7 @@ const Shpallje = () => {
             <span className="regular-text fs-6">{post.cmimiDitor} €</span>
           </div>
           <div className="item">
-            <span className="big-text fs-5">Reservation Day:</span>
+            <span className="big-text fs-5">Departure Day:</span>
             <span className="regular-text fs-6">{post.dataRezervimit ? new Date(post.dataRezervimit).toLocaleDateString() : null}</span>
           </div>
         </div>
